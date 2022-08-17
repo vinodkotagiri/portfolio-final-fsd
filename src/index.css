@@ -1,13 +1,231 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* font-family: 'Poppins',sans-serif; */
+/* font-family: 'Great Vibes',cursive; */
+
+html {
+    font-family: 'Poppins', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar-brand {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.25rem;
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+
+    .particles,
+    .logo {
+        display: none;
+    }
+}
+
+.particles {
+    opacity: 40%;
+}
+
+.hero {
+    z-index: 10;
+    margin-top: 5% !important;
+}
+
+.logo {
+    width: 100px;
+    height: 120px;
+    opacity: 10%;
+    z-index: 1;
+}
+
+.html-logo {
+    position: fixed;
+    top: 15%;
+    left: 10%;
+    transform: rotate(-20deg);
+}
+
+.css-logo {
+    position: fixed;
+    top: 18%;
+    left: 20%;
+    transform: rotate(3deg);
+}
+
+.js-logo {
+    position: fixed;
+    top: 22%;
+    left: 27%;
+    transform: rotate(-3deg);
+}
+
+.bs-logo {
+    position: fixed;
+    top: 32%;
+    left: 16%;
+    transform: rotate(6deg);
+}
+
+.tw-logo {
+    position: fixed;
+    top: 15%;
+    right: 15%;
+    transform: rotate(6deg);
+}
+
+.react-logo {
+    position: fixed;
+    top: 20%;
+    right: 25%;
+    transform: rotate(180deg);
+}
+
+.redux-logo {
+    position: fixed;
+    top: 28%;
+    right: 16%;
+    transform: rotate(270deg);
+}
+
+.node-logo {
+    position: fixed;
+    top: 40%;
+    right: 25%;
+    transform: rotate(30deg);
+}
+
+.gql-logo {
+    position: fixed;
+    bottom: 30%;
+    right: 15%;
+    transform: rotate(60deg);
+}
+
+.py-logo {
+    position: fixed;
+    bottom: 20%;
+    right: 25%;
+    transform: rotate(45deg);
+}
+
+.mongo-logo {
+    position: fixed;
+    bottom: 20%;
+    right: 50%;
+    transform: rotate(6deg);
+    transform: scale(0.4);
+}
+
+.msql-logo {
+    position: fixed;
+    bottom: 20%;
+    right: 60%;
+    transform: rotate(6deg);
+    transform: scale(0.4);
+}
+
+.aws-logo {
+    position: fixed;
+    bottom: 32%;
+    right: 60%;
+    transform: rotate(6deg);
+    transform: scale(0.5);
+}
+
+.gcp-logo {
+    position: fixed;
+    bottom: 38%;
+    left: 25%;
+    transform: rotate(6deg);
+    transform: scale(0.4);
+}
+
+.git-logo {
+    position: fixed;
+    bottom: 20%;
+    left: 18%;
+    transform: rotate(6deg);
+    transform: scale(0.6);
+}
+
+.fire-logo {
+    position: fixed;
+    bottom: 20%;
+    left: 10%;
+    transform: rotate(6deg);
+    transform: scale(0.6);
+}
+
+.logo {
+    animation: pulse 2s ease-in-out alternate infinite running;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(.5);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    1000% {
+        transform: scale(1.5);
+    }
+}
+
+.social-band {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+    vertical-align: text-bottom;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 0 1rem;
+    position: fixed;
+    border-radius: 0.5rem;
+    color: azure;
+    margin-bottom: 0.05rem;
+}
+
+.linkedin {
+    top: 45%;
+    left: -170px;
+    color: #0077B7;
+}
+
+.github {
+    top: 54%;
+    left: -140px;
+    color: #1B1817;
+}
+
+.mail {
+    top: 63%;
+    left: -228px;
+    color: #FDC147;
+}
+
+.social-band:hover {
+    left: -10px;
+    transition: ease-in-out 0.5s;
+}
+
+.social-text {
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-right: 0.5rem;
+
+}
+
+.social-logo {
+    width: 2.5rem;
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+    .social-band {
+        display: none;
+    }
 }
