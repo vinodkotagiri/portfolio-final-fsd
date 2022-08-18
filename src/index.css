@@ -15,11 +15,11 @@ html {
 }
 
 .navbar {
-    background-color: #0196FF !important;
+    background-color: #44A8B3 !important;
 }
 
 .btn-primary {
-    background-color: #0196FF !important;
+    background-color: #44A8B3 !important;
 }
 
 @media screen and (min-width: 320px) and (max-width: 576px) {
@@ -281,20 +281,113 @@ a {
     gap: 1rem;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    border: 1px solid ghostwhite;
     width: fit-content;
     border-radius: 3rem 0 3rem 0;
+    box-shadow: 1px 1px 4px 4px #097CBA;
 }
 
+.skill-container:hover {
+    transform: scale(1.1);
+    overflow: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: all ease-in-out 300ms;
+    cursor: pointer;
+
+}
+
+
 .skill-logo {
+    filter: drop-shadow(6px 10px 4px ghostwhite);
     height: 5rem;
 }
 
 .html-container {
-    background-color: #F1662A95;
+    border: 2px solid #f1662a;
 }
 
 .html {
-    filter: drop-shadow(6px 10px 4px ghostwhite);
     color: #F1662A;
+}
+
+
+
+.css-container {
+    border: 2px solid #264DE4;
+}
+
+.css {
+    color: #264DE4;
+}
+
+.js-container {
+    border: 2px solid #F1DC50;
+}
+
+.js {
+    color: #F1DC50;
+}
+
+.bs-container {
+    border: 2px solid #563D7C;
+}
+
+.bs {
+    color: #563D7C;
+}
+
+.tw-container {
+    border: 2px solid #44A8B3;
+}
+
+.tw {
+    color: #44A8B3;
+}
+
+.mui-container {
+    border: 2px solid #0081CB;
+}
+
+.mui {
+    color: #0081CB;
+}
+
+.antd-container {
+    border: 2px solid #000;
+}
+
+.antd {
+    color: #000;
+}
+
+.figma-container {
+    border: 2px solid #A259FF;
+}
+
+.figma {
+    color: #A259FF;
+}
+
+.react-container {
+    border: 2px solid #00D8FF;
+}
+
+.react {
+    color: #00D8FF;
+}
+
+.redux-container {
+    border: 2px solid #764ABC;
+}
+
+.redux {
+    color: #764ABC;
+}
+
+.node-container {
+    border: 2px solid #85CE2D;
+}
+
+.node {
+    color: #85CE2D;
 }

@@ -14,7 +14,9 @@ export { default as NODE_IMG } from './node-svgrepo-com.svg'
 export { default as PYTHON_IMG } from './python-svgrepo-com.svg'
 export { default as MYSQL_IMG } from './mysql-svgrepo-com.svg'
 export { default as FIRE_IMG } from './firebase-svgrepo-com.svg'
-
+export { default as MUI_IMG } from './material-ui-svgrepo-com.svg'
+export { default as ANT_IMG } from './antdesign-svgrepo-com.svg'
+export { default as FIGMA_IMG } from './figma-svgrepo-com.svg'
 
 export { default as LinkedinLogo } from './linkedin-svgrepo-com.svg'
 export { default as GithubLogo } from './github-svgrepo-com.svg'
