@@ -1,7 +1,0 @@
-export { default as Navbar } from './component.navbar'
-export { default as Hero } from './component.hero'
-export { default as About } from './component.about'
-export { default as Skills } from './component.skills'
-export { default as Portfolio } from './component.portfolio'
-export { default as Contact } from './component.contact.jsx'
-export { default as AnimatedRoutes } from './component.animatedroutes'
