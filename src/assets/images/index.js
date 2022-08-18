@@ -1,4 +1,4 @@
-export { default as HTML_IMG } from './html-5-logo-svgrepo-com.svg'
+export { default as HTML_IMG } from './html-svgrepo-com.svg'
 export { default as CSS_IMG } from './css3-svgrepo-com.svg'
 export { default as JS_IMG } from './js-svgrepo-com.svg'
 export { default as BS_IMG } from './bootstrap-svgrepo-com.svg'
@@ -19,3 +19,5 @@ export { default as FIRE_IMG } from './firebase-svgrepo-com.svg'
 export { default as LinkedinLogo } from './linkedin-svgrepo-com.svg'
 export { default as GithubLogo } from './github-svgrepo-com.svg'
 export { default as MailLogo } from './mail-svgrepo-com.svg'
+
+export { default as AuthorImg } from './author.png'

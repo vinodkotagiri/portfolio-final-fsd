@@ -10,8 +10,16 @@ html {
 
 .navbar-brand {
     font-family: 'Great Vibes', cursive;
-    font-size: 2.25rem;
+    font-size: 1.4rem;
 
+}
+
+.navbar {
+    background-color: #0196FF !important;
+}
+
+.btn-primary {
+    background-color: #0196FF !important;
 }
 
 @media screen and (min-width: 320px) and (max-width: 576px) {
@@ -174,6 +182,12 @@ html {
     }
 }
 
+a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+}
+
 .social-band {
     display: flex;
     flex-direction: row;
@@ -187,6 +201,7 @@ html {
     border-radius: 0.5rem;
     color: azure;
     margin-bottom: 0.05rem;
+    cursor: pointer;
 }
 
 .linkedin {
@@ -228,4 +243,58 @@ html {
     .social-band {
         display: none;
     }
+}
+
+.title-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.page-title {
+    color: #0077B7;
+}
+
+.about-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+    text-align: left;
+
+}
+
+.author-logo {
+    width: 25%;
+    aspect-ratio: 1;
+    border-radius: 0 20% 0 20%;
+}
+
+.skill-container {
+    margin-top: 2rem;
+    padding: 0.5rem 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: fit-content;
+    border-radius: 3rem 0 3rem 0;
+}
+
+.skill-logo {
+    height: 5rem;
+}
+
+.html-container {
+    background-color: #F1662A95;
+}
+
+.html {
+    filter: drop-shadow(6px 10px 4px ghostwhite);
+    color: #F1662A;
 }
