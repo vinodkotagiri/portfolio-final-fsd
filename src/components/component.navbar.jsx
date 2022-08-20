@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
 import { AppBar, Box, Toolbar, Stack, Typography, Button, IconButton } from '@mui/material'
 import { MenuRounded, CloseRounded } from '@mui/icons-material'
 const Navbar = () => {
     const [toggle, setToggle] = useState(false)
     const [displayDrawer, setDisplayDrawer] = useState('none')
+    const navigate = useNavigate()
     const toggleMenu = () => {
         setToggle(!toggle)
         displayDrawer === 'none' ? setDisplayDrawer('flex') : setDisplayDrawer('none')
@@ -14,14 +15,15 @@ const Navbar = () => {
             <AppBar sx={{ marginBottom: '3rem', position: 'fixed' }} >
                 <Toolbar>
                     <Stack direction='row' sx={{ flexGrow: 1, justifyContent: 'space-between' }}>
-                        <Typography variant='h4' component='div' sx={{ fontFamily: 'Great Vibes' }}> Vinod Kotagiri</Typography>
+                        <Typography variant='h4' component='div' sx={{ fontFamily: 'Great Vibes', cursor: 'pointer' }} onClick={() => navigate('/')}> Vinod Kotagiri</Typography>
                         {/* NavItems */}
+
                         <Stack direction='row' sx={{ display: { xs: 'none', md: 'flex' } }} >
-                            <Button variant='large'>Home</Button>
-                            <Button variant='large'>About</Button>
-                            <Button variant='large'>Skills</Button>
-                            <Button variant='large'>Portfolio</Button>
-                            <Button variant='large'>Contact</Button>
+                            <Button variant='large' onClick={() => navigate('/')}>Home</Button>
+                            <Button variant='large' onClick={() => navigate('/about')}>About</Button>
+                            <Button variant='large' onClick={() => navigate('/skills')}>Skills</Button>
+                            <Button variant='large' onClick={() => navigate('/portfolio')}>Portfolio</Button>
+                            <Button variant='large' onClick={() => navigate('/contact')}>Contact</Button>
                         </Stack>
                         {
                             !toggle ? <IconButton size='large' color='inherit' sx={{ display: { xs: 'flex', md: 'none' } }}
@@ -36,17 +38,17 @@ const Navbar = () => {
                     </Stack>
                 </Toolbar>
             </AppBar >
-            <Stack direction='column' bgcolor='text.secondary' sx={{ display: { xs: `${displayDrawer}`, md: 'none' } }} >
-                <Button variant='large'>Home</Button>
-                <Button variant='large'>About</Button>
-                <Button variant='large'>Skills</Button>
-                <Button variant='large'>Portfolio</Button>
-                <Button variant='large'>Contact</Button>
-            </Stack>
             <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '90vh' }}>
                 <Outlet />
             </Box>
-        </div>
+            <Stack direction='column' bgcolor='primary.main' color='#fff' sx={{ zIndex: '1', width: '100%', position: 'absolute', top: '3.5rem', right: '0', display: { xs: `${displayDrawer}`, md: 'none' } }} >
+                <Button variant='large' onClick={() => navigate('/')}>Home</Button>
+                <Button variant='large' onClick={() => navigate('/about')}>About</Button>
+                <Button variant='large' onClick={() => navigate('/skills')}>Skills</Button>
+                <Button variant='large' onClick={() => navigate('/portfolio')}>Portfolio</Button>
+                <Button variant='large' onClick={() => navigate('/contact')}>Contact</Button>
+            </Stack>
+        </div >
     )
 }
 
