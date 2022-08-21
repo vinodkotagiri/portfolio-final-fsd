@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import {
   AppBar,
-  Box,
   Toolbar,
   Stack,
   Typography,
@@ -78,17 +77,18 @@ const Navbar = () => {
           </Stack>
         </Toolbar>
       </AppBar>
-      <Box
+      {/* <Box
         sx={{
           display: 'flex',
           justifyContent: 'flex-start',
+          alignContent: 'flex-start',
           alignItems: 'center',
           flexWrap: 'wrap',
           height: '90vh',
         }}
-      >
-        <Outlet />
-      </Box>
+      > */}
+      <Outlet />
+      {/* </Box> */}
       <Stack
         direction='column'
         bgcolor='primary.main'

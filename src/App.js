@@ -6,6 +6,7 @@ import AboutPage from './components/component.aboutpage.jsx'
 import SkillsPage from './components/component.skillspage.jsx'
 import PortfolioPage from './components/component.portfoliopage.jsx'
 import ContactPage from './components/component.contactpage.jsx'
+
 const App = () => {
     return (
         <>
@@ -18,6 +19,7 @@ const App = () => {
                     <Route path='contact' element={<ContactPage />} />
                 </Route>
             </Routes>
+
         </>
     )
 }

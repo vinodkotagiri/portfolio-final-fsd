@@ -144,7 +144,7 @@ const SkillsPage = () => {
   ];
 
   return (
-    <Box sx={{ flexWrap: 'wrap', marginBlockStart: '4rem' }}>
+    <Box sx={{ marginBlockStart: '4rem' }}>
       <Stack
         direction='row'
         sx={{
@@ -161,7 +161,6 @@ const SkillsPage = () => {
           SKILLS
         </Typography>
       </Stack>
-      
       <Stack
         direction='column'
         sx={{
