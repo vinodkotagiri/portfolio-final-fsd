@@ -9,7 +9,6 @@ import ContactPage from './components/component.contactpage.jsx'
 const App = () => {
     return (
         <>
-
             <Routes>
                 <Route path='/' element={<Navbar />} >
                     <Route index element={<HomePage />} />
