@@ -16,7 +16,6 @@ const AboutPage = () => {
           justifyContent: 'center',
           alignItems: 'center',
           flexWrap: 'wrap',
-          marginBottom: '2rem',
         }}
       >
         <InfoRounded color='primary' sx={{ fontSize: '2.7rem' }} />
@@ -26,17 +25,26 @@ const AboutPage = () => {
       </Stack>
 
       <Stack
-        direction='row'
-        sx={{ justifyContent: 'center', alignItems: 'center' }}
+        direction={{ md: 'row', xs: 'column' }}
+        gap={4}
+        sx={{
+          justifyContent: 'center',
+          alignItems: 'center',
+          border: '1px solid #1976D2',
+          borderRadius: '2rem',
+          boxShadow: '2px -3px 20px 2px #1976D2',
+        }}
       >
-        <img
-          src={AuthorImg}
-          alt='author'
-          style={{
-            width: '50%',
-            filter: 'brightness(120%)',
-          }}
-        />
+        <Stack sx={{ justifyContent: 'center', alignItems: 'center' }}>
+          <img
+            src={AuthorImg}
+            alt='author'
+            style={{
+              width: '100%',
+              filter: 'brightness(120%)',
+            }}
+          />
+        </Stack>
         <Typography variant='p' color='#616161' sx={{ fontSize: '1.55rem' }}>
           A Fullstack web developer specialized in MERN stack with a good hands
           on experience in building web applications which are Responsive,

@@ -144,7 +144,17 @@ const SkillsPage = () => {
   ];
 
   return (
-    <Box sx={{ marginBlockStart: '4rem' }}>
+    <Box
+      Box
+      sx={{
+        marginBlockStart: '4rem',
+        justifyContent: 'center',
+        alignItems: 'center',
+        alignContent: 'center',
+        width: '90vw',
+        padding: '0.5rem',
+      }}
+    >
       <Stack
         direction='row'
         sx={{
@@ -166,6 +176,12 @@ const SkillsPage = () => {
         sx={{
           justifyContent: 'center',
           alignItems: 'center',
+          border: '1px solid #1976D2',
+          borderRadius: '2rem',
+          boxShadow: '2px -3px 20px 2px #1976D2',
+          padding: '1rem',
+          marginLeft: { md: '5rem' },
+          marginTop: '1rem',
         }}
       >
         <Stack
