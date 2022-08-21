@@ -1,6 +1,5 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-
 import Navbar from './components/component.navbar'
 import HomePage from './components/component.homepage'
 import AboutPage from './components/component.aboutpage.jsx'
@@ -10,6 +9,7 @@ import ContactPage from './components/component.contactpage.jsx'
 const App = () => {
     return (
         <>
+
             <Routes>
                 <Route path='/' element={<Navbar />} >
                     <Route index element={<HomePage />} />
