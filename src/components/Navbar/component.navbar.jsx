@@ -28,13 +28,15 @@ const Navbar = () => {
             }}
           >
             <Stack>
-              <Typography
-                variant='h4'
-                color='#fff'
-                sx={{ fontFamily: 'Great Vibes' }}
-              >
-                Vinod Kotagiri
-              </Typography>
+              <NavLink to='/'>
+                <Typography
+                  variant='h4'
+                  color='primary'
+                  sx={{ fontFamily: 'Great Vibes' }}
+                >
+                  Vinod Kotagiri
+                </Typography>
+              </NavLink>
             </Stack>
 
             <Stack
@@ -48,37 +50,37 @@ const Navbar = () => {
             >
               <Stack>
                 <NavLink to='/'>
-                  <Typography color='#fff'>HOME</Typography>
+                  <Typography color='primary'>HOME</Typography>
                 </NavLink>
               </Stack>
 
               <Stack>
                 <NavLink to='/about'>
-                  <Typography color='#fff'>ABOUT</Typography>
+                  <Typography color='primary'>ABOUT</Typography>
                 </NavLink>
               </Stack>
 
               <Stack>
                 <NavLink to='/skills'>
-                  <Typography color='#fff'>SKILLS</Typography>
+                  <Typography color='primary'>SKILLS</Typography>
+                </NavLink>
+              </Stack>
+
+              <Stack>
+                <NavLink to='/portfolio'>
+                  <Typography color='primary'>PORTFOLIO</Typography>
+                </NavLink>
+              </Stack>
+
+              <Stack>
+                <NavLink to='/contact'>
+                  <Typography color='primary'>CONTACT</Typography>
                 </NavLink>
               </Stack>
 
               <Stack>
                 <NavLink to='/'>
-                  <Typography color='#fff'>PORTFOLIO</Typography>
-                </NavLink>
-              </Stack>
-
-              <Stack>
-                <NavLink to='/'>
-                  <Typography color='#fff'>CONTACT</Typography>
-                </NavLink>
-              </Stack>
-
-              <Stack>
-                <NavLink to='/'>
-                  <Typography color='#fff'>BLOG</Typography>
+                  <Typography color='primary'>BLOG</Typography>
                 </NavLink>
               </Stack>
             </Stack>
@@ -120,7 +122,7 @@ const Navbar = () => {
           <NavLink to='/contact'>
             <ContactPage sx={{ fontSize: '40px', color: '#fff' }} />
           </NavLink>
-          <NavLink to='/blog'>
+          <NavLink to='/'>
             <RssFeed sx={{ fontSize: '40px', color: '#fff' }} />
           </NavLink>
         </Stack>
