@@ -30,9 +30,9 @@ const Navbar = () => {
             <Stack>
               <NavLink to='/'>
                 <Typography
-                  variant='h4'
-                  color='primary'
-                  sx={{ fontFamily: 'Great Vibes' }}
+                  variant='h3'
+                  color='secondary'
+                  sx={{ fontFamily: 'Great Vibes', padding: '4px' }}
                 >
                   Vinod Kotagiri
                 </Typography>
