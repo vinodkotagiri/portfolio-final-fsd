@@ -9,7 +9,7 @@ import {
   ContactPage,
   RssFeed,
 } from '@mui/icons-material';
-import './styles.navbar.css';
+
 const Navbar = () => {
   return (
     <Fragment>
