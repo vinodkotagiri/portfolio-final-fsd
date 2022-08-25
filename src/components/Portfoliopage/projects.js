@@ -3,24 +3,16 @@ export const Projects = [
     {
         id: '1',
         name: 'Membook',
-        description: 'Membook is a facebook clone web application built with React as Front end and NodeJS as scalable backend. Membook features a strong authentication system and advanced form validation techniques and more..',
+        description: 'Welcome to Membook, the best social media app for staying connected with your friends and family. Membook is the perfect way to keep in touch with loved ones all over the world. With Membook, you can share photos, videos, and thoughts with your friends and family whenever and wherever you want. Membook is the ultimate social media app for staying connected with the people you care about most.',
         cover: require('../../assets/images/social-media.png'),
         frontEndCode: '',
         backEndCode: '',
-        deployedUrl: '',
-        techs: `Used React and MaterialUi for front end design.
-        Used Express and NodeJS for backend develpment. 
-        Form validation is handled by Formik and Yup. 
-        MongoDB is used for database. 
-        Authentication is based on JSON Web tokens with verification system. 
-        Statemanagement is handled by Redux. 
-        Created protected routes for specific secured pages. 
-        Added a dark mode  with ability to toggle between. The app is fully responsive and created using different reusable components`,
+        deployedUrl: ''
     },
     {
         id: '2',
         name: 'SCart',
-        description: '',
+        description: 'SCart is a new and revolutionary e-commerce platform that allows businesses to sell their products and services online in a more efficient and cost-effective manner. SCart offers a wide range of features and benefits that are not available with other e-commerce platforms, including a built-in payment processing system, advanced order management system, and a powerful search engine.',
         cover: require('../../assets/images/ecommerce-cover.png'),
         frontEndCode: '',
         backEndCode: '',
@@ -29,7 +21,7 @@ export const Projects = [
     {
         id: '3',
         name: 'NuChat',
-        description: '',
+        description: 'Introducing NuChat! This is the ultimate communication app that lets you chat and have group video calls with your friends and family. With NuChat, you can keep in touch with loved ones no matter where they are in the world. Plus, with our cutting-edge video call technology, you can see and hear them in stunning HD quality. Try NuChat today and experience the best way to stay connected!',
         cover: require('../../assets/images/nuchat-hero.jpg'),
         frontEndCode: '',
         backEndCode: '',
@@ -38,7 +30,7 @@ export const Projects = [
     {
         id: '4',
         name: 'Blocks',
-        description: '',
+        description: "Blocks is a content management system that enables businesses to manage their website's content without having to rely on expensive and time- consuming web development services.Blocks makes it easy for businesses to create, edit, and publish website content without having any html or css knowledge.With Blocks, businesses can easily keep their website's content up-to-date and SEO optimized.",
         cover: require('../../assets/images/cms.jpg'),
         frontEndCode: '',
         backEndCode: '',
