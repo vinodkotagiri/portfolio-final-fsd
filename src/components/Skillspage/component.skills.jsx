@@ -1,6 +1,6 @@
 import React from 'react';
 import ParticlesBg from 'particles-bg';
-import { Stack, Typography, Box } from '@mui/material';
+import { Stack, Typography, Grid } from '@mui/material';
 import { MySkills } from './skills';
 import { Lightbulb } from '@mui/icons-material';
 const Skills = () => {
@@ -12,6 +12,7 @@ const Skills = () => {
           justifyContent: 'center',
           alignItems: 'center',
           marginTop: '32px',
+          marginBottom: '64px',
         }}
       >
         <Stack
@@ -25,31 +26,14 @@ const Skills = () => {
           </Typography>
         </Stack>
       </Stack>
-      <Box
-        sx={{
-          backgroundColor: '#00000095',
-          width: { md: '75%', xs: '100%' },
-          height: { md: '65%', xs: '0' },
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%,-40%)',
-          padding: '2rem',
-          borderRadius: '4rem',
 
-          boxShadow: '2px 2px 32px 8px #9124A3',
-        }}
+      <Grid
+        container
+        spacing={8}
+        sx={{ justifyContent: 'center', alignItems: 'center', padding: '8px ' }}
       >
-        <Stack
-          direction={{ xs: 'column', md: 'row' }}
-          gap={6}
-          sx={{
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          {MySkills.map((skill) => (
+        {MySkills.map((skill) => (
+          <Grid item key={skill.id}>
             <Stack
               sx={{
                 justifyContent: 'space-between',
@@ -62,9 +46,9 @@ const Skills = () => {
                 {skill.name}
               </Typography>
             </Stack>
-          ))}
-        </Stack>
-      </Box>
+          </Grid>
+        ))}
+      </Grid>
     </div>
   );
 };

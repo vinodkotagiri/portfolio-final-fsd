@@ -14,11 +14,12 @@ import {
     PythonLogo,
     MySqlLogo,
     MongoDBLogo,
-    // RestLogo,
     GraphQlLogo,
     GitLogo,
     AWSLogo,
-    GCPLogo
+    GCPLogo,
+    FireBaseLogo,
+    FlaskLogo
 } from '../../assets'
 
 export const MySkills = [
@@ -69,8 +70,8 @@ export const MySkills = [
     },
     {
         id: 10,
-        name: 'HTML',
-        logo: HtmlLogo,
+        name: 'Flask',
+        logo: FlaskLogo,
     },
     {
         id: 11,
@@ -124,7 +125,7 @@ export const MySkills = [
     },
     {
         id: 20,
-        name: 'HTML',
-        logo: HtmlLogo,
+        name: 'Firebase',
+        logo: FireBaseLogo,
     },
 ]
