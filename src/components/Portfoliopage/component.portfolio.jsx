@@ -51,8 +51,9 @@ const Portfolio = () => {
               sx={{
                 maxWidth: { xs: '80%', md: 400 },
                 borderRadius: 5,
-                height: 480,
-                width: { xs: '100%' },
+                height: 'auto',
+                width: { xs: '70%', md: 'auto' },
+                boxShadow: '1px 1px 8px 2px #9B27AF',
               }}
             >
               <CardMedia
@@ -61,7 +62,7 @@ const Portfolio = () => {
                 alt={`${project.name}-logo`}
                 height={140}
               />
-              <Stack gap={4}>
+              <Stack gap={2}>
                 <CardContent sx={{ height: 250 }}>
                   <Typography variant='h4' color='#000'>
                     {project.name}
@@ -70,30 +71,40 @@ const Portfolio = () => {
                     {project.description}
                   </Typography>
                 </CardContent>
-                <CardActions>
-                  <Button
-                    endIcon={<Preview />}
-                    variant='contained'
-                    size='large'
+                <CardActions sx={{ marginTop: { xs: 8, md: 'auto' } }}>
+                  <Stack
+                    gap={2}
+                    direction={{ xs: 'column', md: 'row' }}
+                    sx={{
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      margin: '0 auto',
+                    }}
                   >
-                    Demo
-                  </Button>
-                  <Button
-                    startIcon={<Code />}
-                    variant='outlined'
-                    color='secondary'
-                    size='large'
-                  >
-                    Frontend
-                  </Button>
-                  <Button
-                    startIcon={<Code />}
-                    variant='outlined'
-                    color='secondary'
-                    size='large'
-                  >
-                    Backend
-                  </Button>
+                    <Button
+                      endIcon={<Preview />}
+                      variant='contained'
+                      size='small'
+                    >
+                      Demo
+                    </Button>
+                    <Button
+                      startIcon={<Code />}
+                      variant='outlined'
+                      color='secondary'
+                      size='small'
+                    >
+                      Frontend
+                    </Button>
+                    <Button
+                      startIcon={<Code />}
+                      variant='outlined'
+                      color='secondary'
+                      size='small'
+                    >
+                      Backend
+                    </Button>
+                  </Stack>
                 </CardActions>
               </Stack>
             </Card>

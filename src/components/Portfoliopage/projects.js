@@ -7,7 +7,7 @@ export const Projects = [
         cover: require('../../assets/images/social-media.png'),
         frontEndCode: '',
         backEndCode: '',
-        deployedUrl: ''
+        deployedUrl: '',
     },
     {
         id: '2',

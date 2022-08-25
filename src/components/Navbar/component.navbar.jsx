@@ -79,9 +79,13 @@ const Navbar = () => {
               </Stack>
 
               <Stack>
-                <NavLink to='/'>
-                  <Typography color='primary'>BLOG</Typography>
-                </NavLink>
+                <Typography
+                  color='primary'
+                  onClick={() => window.open('https://codingfsd.blogspot.com/')}
+                  sx={{ cursor: 'pointer' }}
+                >
+                  BLOG
+                </Typography>
               </Stack>
             </Stack>
           </Stack>
@@ -122,9 +126,11 @@ const Navbar = () => {
           <NavLink to='/contact'>
             <ContactPage sx={{ fontSize: '40px', color: '#fff' }} />
           </NavLink>
-          <NavLink to='/'>
-            <RssFeed sx={{ fontSize: '40px', color: '#fff' }} />
-          </NavLink>
+
+          <RssFeed
+            sx={{ fontSize: '40px', color: '#fff' }}
+            onClick={() => window.open('https://codingfsd.blogspot.com/')}
+          />
         </Stack>
       </Paper>
     </Fragment>
