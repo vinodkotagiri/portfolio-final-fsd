@@ -81,7 +81,9 @@ const Navbar = () => {
               <Stack>
                 <Typography
                   color='primary'
-                  onClick={() => window.open('https://codingfsd.blogspot.com/')}
+                  onClick={() =>
+                    window.open('https://medium.com/@vinodkotagiri')
+                  }
                   sx={{ cursor: 'pointer' }}
                 >
                   BLOG
@@ -112,24 +114,24 @@ const Navbar = () => {
           }}
         >
           <NavLink to='/'>
-            <Home sx={{ fontSize: '40px', color: '#fff' }} />
+            <Home sx={{ fontSize: '40px', color: '#9C27B0' }} />
           </NavLink>
           <NavLink to='/about'>
-            <Info sx={{ fontSize: '40px', color: '#fff' }} />
+            <Info sx={{ fontSize: '40px', color: '#9C27B0' }} />
           </NavLink>
           <NavLink to='/skills'>
-            <Lightbulb sx={{ fontSize: '40px', color: '#fff' }} />
+            <Lightbulb sx={{ fontSize: '40px', color: '#9C27B0' }} />
           </NavLink>
           <NavLink to='/portfolio'>
-            <Assignment sx={{ fontSize: '40px', color: '#fff' }} />
+            <Assignment sx={{ fontSize: '40px', color: '#9C27B0' }} />
           </NavLink>
           <NavLink to='/contact'>
-            <ContactPage sx={{ fontSize: '40px', color: '#fff' }} />
+            <ContactPage sx={{ fontSize: '40px', color: '#9C27B0' }} />
           </NavLink>
 
           <RssFeed
             sx={{ fontSize: '40px', color: '#fff' }}
-            onClick={() => window.open('https://codingfsd.blogspot.com/')}
+            onClick={() => window.open('https://medium.com/@vinodkotagiri')}
           />
         </Stack>
       </Paper>
