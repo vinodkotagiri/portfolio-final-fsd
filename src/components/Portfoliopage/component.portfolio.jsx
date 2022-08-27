@@ -8,6 +8,7 @@ import {
   CardMedia,
   CardContent,
   CardActions,
+  Paper
 } from '@mui/material';
 import ParticlesBg from 'particles-bg';
 import { Assessment, Preview, Code } from '@mui/icons-material';
@@ -22,14 +23,12 @@ const Portfolio = () => {
           justifyContent: 'center',
           alignItems: 'center',
           marginTop: '32px',
-          marginBottom: '8px',
-        }}
-      >
+          marginBottom: '8px'
+        }}>
         <Stack
           direction='row'
           gap={2}
-          sx={{ justifyContent: 'center', alignItems: 'center' }}
-        >
+          sx={{ justifyContent: 'center', alignItems: 'center' }}>
           <Assessment sx={{ fontSize: '32px' }} color='secondary' />
           <Typography variant='h4' color='secondary'>
             Portfolio
@@ -42,9 +41,8 @@ const Portfolio = () => {
         sx={{
           justifyContent: { xs: 'flex-start', md: 'center' },
           alignItems: 'center',
-          marginLeft: '32px',
-        }}
-      >
+          marginLeft: '32px'
+        }}>
         {Projects.map((project) => (
           <Grid item key={project.id}>
             <Card
@@ -53,9 +51,8 @@ const Portfolio = () => {
                 borderRadius: 5,
                 height: 'auto',
                 width: { xs: '70%', md: 'auto' },
-                boxShadow: '1px 1px 8px 2px #9B27AF',
-              }}
-            >
+                boxShadow: '1px 1px 8px 2px #9B27AF'
+              }}>
               <CardMedia
                 component='img'
                 image={project.cover}
@@ -78,30 +75,26 @@ const Portfolio = () => {
                     sx={{
                       justifyContent: 'center',
                       alignItems: 'center',
-                      margin: '0 auto',
-                    }}
-                  >
+                      margin: '0 auto'
+                    }}>
                     <Button
                       endIcon={<Preview />}
                       variant='contained'
-                      size='small'
-                    >
+                      size='small'>
                       Demo
                     </Button>
                     <Button
                       startIcon={<Code />}
                       variant='outlined'
                       color='secondary'
-                      size='small'
-                    >
+                      size='small'>
                       Frontend
                     </Button>
                     <Button
                       startIcon={<Code />}
                       variant='outlined'
                       color='secondary'
-                      size='small'
-                    >
+                      size='small'>
                       Backend
                     </Button>
                   </Stack>
@@ -111,6 +104,24 @@ const Portfolio = () => {
           </Grid>
         ))}
       </Grid>
+      {/* TEMPORARY OVERLAY: REMOVE AFTER ALL PROJETCS COMPLETED */}
+      <Paper
+        elevation={3}
+        sx={{
+          position: 'fixed',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          height: '100vh',
+          width: '100vw',
+          backgroundColor: '#ffffff30',
+          borderRadius: '2rem',
+          display: 'flex',
+          justifyContent: 'center',
+          zIndex: 100
+        }}>
+        <img src={require('./wip.gif')} alt='wip-logo' />
+      </Paper>
     </div>
   );
 };
