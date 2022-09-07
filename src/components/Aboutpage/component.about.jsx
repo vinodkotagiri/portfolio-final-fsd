@@ -1,24 +1,21 @@
 import React from 'react';
 import { Typography, Stack, Paper } from '@mui/material';
 import { Info } from '@mui/icons-material';
-import HeroImg from '../../assets/vinu.png';
 import ParticlesBg from 'particles-bg';
 const About = () => {
   return (
     <div>
-      <ParticlesBg type='cobweb' color='#616161' bg={true} />
+      <ParticlesBg type='cobweb' color='#9B27AF' bg={true} />
       <Stack
         sx={{
           justifyContent: 'center',
           alignItems: 'center',
-          marginTop: '32px',
-        }}
-      >
+          marginTop: '32px'
+        }}>
         <Stack
           direction='row'
           gap={2}
-          sx={{ justifyContent: 'center', alignItems: 'center' }}
-        >
+          sx={{ justifyContent: 'center', alignItems: 'center' }}>
           <Info sx={{ fontSize: '32px' }} color='secondary' />
           <Typography variant='h4' color='secondary'>
             About Me
@@ -32,18 +29,20 @@ const About = () => {
           justifyContent: 'space-between',
           alignItems: 'center',
           marginTop: '32px',
-          padding: '0 64px',
-        }}
-      >
+          padding: '0 64px'
+        }}>
         <img
-          src={HeroImg}
+          src='https://res.cloudinary.com/vinodkotagiri/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1662539401/My%20Websites%20assets/vinu_ixjx9s.png'
           alt='hero-img'
-          style={{ width: '280px', borderRadius: '72px' }}
+          style={{
+            width: '280px',
+            backgroundSize: 'cover',
+            borderRadius: '50%'
+          }}
         />
         <Paper
           sx={{ marginBottom: '32px', backgroundColor: '#000' }}
-          elevation={4}
-        >
+          elevation={4}>
           <Typography variant='h4' color='#616161'>
             Hi! I'm{' '}
             <span style={{ fontFamily: 'Great Vibes', color: '#fff' }}>
@@ -66,17 +65,15 @@ const About = () => {
         sx={{
           justifyContent: 'center',
           alignItems: 'center',
-          padding: '0 0 64px 0',
-        }}
-      >
+          padding: '0 0 64px 0'
+        }}>
         <Typography
           variant='p'
           color='secondary'
           sx={{
             fontFamily: 'Emilys Candy',
-            fontSize: { md: '42px', xs: '20px' },
-          }}
-        >
+            fontSize: { md: '42px', xs: '20px' }
+          }}>
           You’re in good hands
           <br />
           Let's make a great web app together!!

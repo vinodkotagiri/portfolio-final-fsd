@@ -1,13 +1,14 @@
 import React, { Fragment } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, Stack, Paper } from '@mui/material';
+import './styles.navbar.css';
 import {
   Home,
   Info,
   Lightbulb,
   Assignment,
   ContactPage,
-  RssFeed,
+  RssFeed
 } from '@mui/icons-material';
 
 const Navbar = () => {
@@ -16,24 +17,21 @@ const Navbar = () => {
       <AppBar
         position='sticky'
         component='nav'
-        sx={{ backgroundColor: '#000000' }}
-      >
+        sx={{ backgroundColor: '#000000' }}>
         <Toolbar>
           <Stack
             direction='row'
             sx={{
               width: '100%',
               justifyContent: { xs: 'center', md: 'space-between' },
-              alignItems: 'center',
-            }}
-          >
+              alignItems: 'center'
+            }}>
             <Stack>
               <NavLink to='/'>
                 <Typography
                   variant='h3'
                   color='secondary'
-                  sx={{ fontFamily: 'Great Vibes', padding: '4px' }}
-                >
+                  sx={{ fontFamily: 'Great Vibes', padding: '4px' }}>
                   Vinod Kotagiri
                 </Typography>
               </NavLink>
@@ -45,47 +43,56 @@ const Navbar = () => {
               sx={{
                 justifyContent: 'even',
                 alignItems: 'center',
-                display: { xs: 'none', md: 'flex' },
-              }}
-            >
+                display: { xs: 'none', md: 'flex' }
+              }}>
               <Stack>
                 <NavLink to='/'>
-                  <Typography color='primary'>HOME</Typography>
+                  <Typography className='nav-link' color='primary'>
+                    HOME
+                  </Typography>
                 </NavLink>
               </Stack>
 
               <Stack>
                 <NavLink to='/about'>
-                  <Typography color='primary'>ABOUT</Typography>
+                  <Typography className='nav-link' color='primary'>
+                    ABOUT
+                  </Typography>
                 </NavLink>
               </Stack>
 
               <Stack>
                 <NavLink to='/skills'>
-                  <Typography color='primary'>SKILLS</Typography>
+                  <Typography className='nav-link' color='primary'>
+                    SKILLS
+                  </Typography>
                 </NavLink>
               </Stack>
 
               <Stack>
                 <NavLink to='/portfolio'>
-                  <Typography color='primary'>PORTFOLIO</Typography>
+                  <Typography className='nav-link' color='primary'>
+                    PORTFOLIO
+                  </Typography>
                 </NavLink>
               </Stack>
 
               <Stack>
                 <NavLink to='/contact'>
-                  <Typography color='primary'>CONTACT</Typography>
+                  <Typography className='nav-link' color='primary'>
+                    CONTACT
+                  </Typography>
                 </NavLink>
               </Stack>
 
               <Stack>
                 <Typography
                   color='primary'
+                  className='nav-link'
                   onClick={() =>
                     window.open('https://medium.com/@vinodkotagiri')
                   }
-                  sx={{ cursor: 'pointer' }}
-                >
+                  sx={{ cursor: 'pointer' }}>
                   BLOG
                 </Typography>
               </Stack>
@@ -100,37 +107,51 @@ const Navbar = () => {
           bottom: 0,
           left: 0,
           right: 0,
-          backgroundColor: '#000000',
+          backgroundColor: '#000000'
         }}
-        elevation={3}
-      >
+        elevation={3}>
         <Stack
           direction='row'
           gap={3}
           sx={{
             justifyContent: 'center',
             alignItems: 'center',
-            display: { xs: 'flex', md: 'none' },
-          }}
-        >
+            display: { xs: 'flex', md: 'none' }
+          }}>
           <NavLink to='/'>
-            <Home sx={{ fontSize: '40px', color: '#9C27B0' }} />
+            <Home
+              className='navlink-mobile'
+              sx={{ fontSize: '40px', color: '#ffffff50' }}
+            />
           </NavLink>
           <NavLink to='/about'>
-            <Info sx={{ fontSize: '40px', color: '#9C27B0' }} />
+            <Info
+              className='navlink-mobile'
+              sx={{ fontSize: '40px', color: '#ffffff50' }}
+            />
           </NavLink>
           <NavLink to='/skills'>
-            <Lightbulb sx={{ fontSize: '40px', color: '#9C27B0' }} />
+            <Lightbulb
+              className='navlink-mobile'
+              sx={{ fontSize: '40px', color: '#ffffff50' }}
+            />
           </NavLink>
           <NavLink to='/portfolio'>
-            <Assignment sx={{ fontSize: '40px', color: '#9C27B0' }} />
+            <Assignment
+              className='navlink-mobile'
+              sx={{ fontSize: '40px', color: '#ffffff50' }}
+            />
           </NavLink>
           <NavLink to='/contact'>
-            <ContactPage sx={{ fontSize: '40px', color: '#9C27B0' }} />
+            <ContactPage
+              className='navlink-mobile'
+              sx={{ fontSize: '40px', color: '#ffffff50' }}
+            />
           </NavLink>
 
           <RssFeed
-            sx={{ fontSize: '40px', color: '#fff' }}
+            className='navlink-mobile'
+            sx={{ fontSize: '40px', color: '#ffffff50' }}
             onClick={() => window.open('https://medium.com/@vinodkotagiri')}
           />
         </Stack>

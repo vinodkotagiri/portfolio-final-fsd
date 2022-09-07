@@ -1,12 +1,6 @@
 import React from 'react';
 import ParticlesBg from 'particles-bg';
-import {
-  Button,
-  Stack,
-  TextareaAutosize,
-  TextField,
-  Typography,
-} from '@mui/material';
+import { Button, Stack, TextField, Typography } from '@mui/material';
 import { ContactMail, Send } from '@mui/icons-material';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
@@ -30,13 +24,13 @@ const validationSchema = yup.object({
     .string('Enter your Message')
     .min(50, 'Message should be minimum 50 characters long')
     .max(200, 'Message should be maximum 200 characters long')
-    .required('*Message is Required'),
+    .required('*Message is Required')
 });
 const initialValues = {
   firstName: '',
   lastName: '',
   email: '',
-  message: ' ',
+  message: ' '
 };
 
 const Contact = () => {
@@ -45,7 +39,7 @@ const Contact = () => {
       firstName: values.firstName,
       lastName: values.lastName,
       email: values.email,
-      message: values.message,
+      message: values.message
     };
     emailjs
       .send(
@@ -62,7 +56,7 @@ const Contact = () => {
   const formik = useFormik({
     initialValues: initialValues,
     validationSchema: validationSchema,
-    onSubmit: (values) => sendEmail(values),
+    onSubmit: (values) => sendEmail(values)
   });
 
   return (
@@ -73,14 +67,12 @@ const Contact = () => {
           justifyContent: 'center',
           alignItems: 'center',
           marginTop: '32px',
-          marginBottom: '8px',
-        }}
-      >
+          marginBottom: '8px'
+        }}>
         <Stack
           direction='row'
           gap={2}
-          sx={{ justifyContent: 'center', alignItems: 'center' }}
-        >
+          sx={{ justifyContent: 'center', alignItems: 'center' }}>
           <ContactMail sx={{ fontSize: '32px' }} color='secondary' />
           <Typography variant='h4' color='secondary'>
             Contact Me
@@ -91,7 +83,7 @@ const Contact = () => {
       <form onSubmit={formik.handleSubmit}>
         <Stack gap={2} sx={{ justifyContent: 'center', alignItems: 'center' }}>
           <TextField
-            sx={{ backgroundColor: '#fff', width: 300 }}
+            sx={{ backgroundColor: '#fff', width: 300, borderRadius: '0.5rem' }}
             id='firstName'
             name='firstName'
             label='First Name'
@@ -102,7 +94,7 @@ const Contact = () => {
             helperText={formik.touched.firstName && formik.errors.firstName}
           />
           <TextField
-            sx={{ backgroundColor: '#fff', width: 300 }}
+            sx={{ backgroundColor: '#fff', width: 300, borderRadius: '0.5rem' }}
             fullWidth
             id='lastName'
             name='lastName'
@@ -114,7 +106,7 @@ const Contact = () => {
             helperText={formik.touched.lastName && formik.errors.lastName}
           />
           <TextField
-            sx={{ backgroundColor: '#fff', width: 300 }}
+            sx={{ backgroundColor: '#fff', width: 300, borderRadius: '0.5rem' }}
             fullWidth
             id='email'
             name='email'
@@ -125,18 +117,27 @@ const Contact = () => {
             error={formik.touched.email && Boolean(formik.errors.email)}
             helperText={formik.touched.email && formik.errors.email}
           />
-          <TextareaAutosize
-            minRows={10}
+          <textarea
+            rows='10'
+            cols='40'
             id='message'
             name='message'
             placeholder='Your Message. . .'
             value={formik.values.message}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            sx={{ width: 300 }}
+            style={{
+              width: 'auto',
+              borderRadius: '0.5rem',
+              padding: '8px',
+              resize: 'none'
+            }}
           />
           {formik.touched.message && Boolean(formik.errors.message) ? (
-            <Typography variant='p' color='red' sx={{ fontSize: '0.8rem' }}>
+            <Typography
+              variant='p'
+              color='red'
+              sx={{ fontSize: '0.8rem', borderRadius: '0.5rem' }}>
               {formik.errors.message}
             </Typography>
           ) : (
@@ -147,8 +148,7 @@ const Contact = () => {
             color='primary'
             variant='contained'
             type='submit'
-            endIcon={<Send />}
-          >
+            endIcon={<Send />}>
             Send
           </Button>
         </Stack>

@@ -9,17 +9,17 @@ import {
     AntLogo,
     MUILogo,
     ReactLogo,
-    ReduxLogo,
+    // ReduxLogo,
     NodeLogo,
     PythonLogo,
     MySqlLogo,
     MongoDBLogo,
-    GraphQlLogo,
+    // GraphQlLogo,
     GitLogo,
     AWSLogo,
-    GCPLogo,
-    FireBaseLogo,
-    FlaskLogo
+    // GCPLogo,
+    // FireBaseLogo,
+    // FlaskLogo
 } from '../../assets'
 
 export const MySkills = [
@@ -68,21 +68,21 @@ export const MySkills = [
         name: 'MaterialUI',
         logo: MUILogo,
     },
-    {
-        id: 10,
-        name: 'Flask',
-        logo: FlaskLogo,
-    },
+    // {
+    //     id: 10,
+    //     name: 'Flask',
+    //     logo: FlaskLogo,
+    // },
     {
         id: 11,
         name: 'React',
         logo: ReactLogo,
     },
-    {
-        id: 21,
-        name: 'Redux',
-        logo: ReduxLogo,
-    },
+    // {
+    //     id: 21,
+    //     name: 'Redux',
+    //     logo: ReduxLogo,
+    // },
     {
         id: 12,
         name: 'NodeJS',
@@ -103,11 +103,11 @@ export const MySkills = [
         name: 'MongoDB',
         logo: MongoDBLogo,
     },
-    {
-        id: 16,
-        name: 'GraphQL',
-        logo: GraphQlLogo,
-    },
+    // {
+    //     id: 16,
+    //     name: 'GraphQL',
+    //     logo: GraphQlLogo,
+    // },
     {
         id: 17,
         name: 'GIT',
@@ -118,14 +118,14 @@ export const MySkills = [
         name: 'AWS',
         logo: AWSLogo,
     },
-    {
-        id: 19,
-        name: 'GCP',
-        logo: GCPLogo,
-    },
-    {
-        id: 20,
-        name: 'Firebase',
-        logo: FireBaseLogo,
-    },
+    // {
+    //     id: 19,
+    //     name: 'GCP',
+    //     logo: GCPLogo,
+    // },
+    // {
+    //     id: 20,
+    //     name: 'Firebase',
+    //     logo: FireBaseLogo,
+    // },
 ]
