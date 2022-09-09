@@ -84,7 +84,7 @@ const Home = () => {
           color='primary'
           onClick={() =>
             window.open(
-              'https://https://www.linkedin.com/in/kotagiri-vinod-a10ba856/'
+              'https://www.linkedin.com/in/kotagiri-vinod-a10ba856/'
             )
           }
         >
