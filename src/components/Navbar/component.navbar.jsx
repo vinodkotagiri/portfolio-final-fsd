@@ -17,7 +17,7 @@ const Navbar = () => {
       <AppBar
         position='sticky'
         component='nav'
-        sx={{ backgroundColor: '#000000' }}>
+        sx={{ backgroundColor: '#00000090' }}>
         <Toolbar>
           <Stack
             direction='row'
@@ -30,7 +30,7 @@ const Navbar = () => {
               <NavLink to='/'>
                 <Typography
                   variant='h3'
-                  color='secondary'
+                  color='success.light'
                   sx={{ fontFamily: 'Great Vibes', padding: '4px' }}>
                   Vinod Kotagiri
                 </Typography>
@@ -47,7 +47,7 @@ const Navbar = () => {
               }}>
               <Stack>
                 <NavLink to='/'>
-                  <Typography className='nav-link' color='primary'>
+                  <Typography className='nav-link' color='warning.light'>
                     HOME
                   </Typography>
                 </NavLink>
@@ -55,15 +55,15 @@ const Navbar = () => {
 
               <Stack>
                 <NavLink to='/about'>
-                  <Typography className='nav-link' color='primary'>
+                  <Typography className='nav-link' color='warning.light'>
                     ABOUT
                   </Typography>
                 </NavLink>
               </Stack>
 
-              <Stack>
+              <Stack >
                 <NavLink to='/skills'>
-                  <Typography className='nav-link' color='primary'>
+                  <Typography className='nav-link' color='warning.light'>
                     SKILLS
                   </Typography>
                 </NavLink>
@@ -71,7 +71,7 @@ const Navbar = () => {
 
               <Stack>
                 <NavLink to='/portfolio'>
-                  <Typography className='nav-link' color='primary'>
+                  <Typography className='nav-link' color='warning.light'>
                     PORTFOLIO
                   </Typography>
                 </NavLink>
@@ -79,7 +79,7 @@ const Navbar = () => {
 
               <Stack>
                 <NavLink to='/contact'>
-                  <Typography className='nav-link' color='primary'>
+                  <Typography className='nav-link' color='warning.light'>
                     CONTACT
                   </Typography>
                 </NavLink>
@@ -87,7 +87,7 @@ const Navbar = () => {
 
               <Stack>
                 <Typography
-                  color='primary'
+                  color='warning.light'
                   className='nav-link'
                   onClick={() =>
                     window.open('https://medium.com/@vinodkotagiri')

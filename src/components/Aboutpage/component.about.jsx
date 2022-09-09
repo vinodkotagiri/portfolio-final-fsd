@@ -5,7 +5,7 @@ import ParticlesBg from 'particles-bg';
 const About = () => {
   return (
     <div>
-      <ParticlesBg type='cobweb' color='#9B27AF' bg={true} />
+      <ParticlesBg type='cobweb' color='#ffc107' bg={true} />
       <Stack
         sx={{
           justifyContent: 'center',
@@ -16,8 +16,8 @@ const About = () => {
           direction='row'
           gap={2}
           sx={{ justifyContent: 'center', alignItems: 'center' }}>
-          <Info sx={{ fontSize: '32px' }} color='secondary' />
-          <Typography variant='h4' color='secondary'>
+          <Info sx={{ fontSize: '32px',color:'#ffc107' }}  />
+          <Typography variant='h4' color='#ffc107'>
             About Me
           </Typography>
         </Stack>
@@ -41,15 +41,15 @@ const About = () => {
           }}
         />
         <Paper
-          sx={{ marginBottom: '32px', backgroundColor: '#000' }}
+          sx={{ marginBottom: '32px', backgroundColor: '#00000050' }}
           elevation={4}>
-          <Typography variant='h4' color='#616161'>
+          <Typography variant='h4' color='#ffffff95'>
             Hi! I'm{' '}
-            <span style={{ fontFamily: 'Great Vibes', color: '#fff' }}>
+            <span style={{ fontFamily: 'Great Vibes', color: '#ffffff80' }}>
               Vinod Kotagiri,
             </span>
           </Typography>
-          <Typography variant='h5' color='#616161'>
+          <Typography variant='h5' color='#fff'>
             I love to design and build websites.
             <br /> I am a full stack developer with a focus on ReactJS.
             <br />I believe in building web applications with a human
@@ -69,7 +69,7 @@ const About = () => {
         }}>
         <Typography
           variant='p'
-          color='secondary'
+          color='#ffc107'
           sx={{
             fontFamily: 'Emilys Candy',
             fontSize: { md: '42px', xs: '20px' }

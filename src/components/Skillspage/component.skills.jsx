@@ -20,8 +20,8 @@ const Skills = () => {
           direction='row'
           gap={2}
           sx={{ justifyContent: 'center', alignItems: 'center' }}>
-          <Lightbulb sx={{ fontSize: '32px' }} color='secondary' />
-          <Typography variant='h4' color='secondary'>
+          <Lightbulb sx={{ fontSize: '32px',color:'#ffc107' }}  />
+          <Typography variant='h4' color='#ffc107'>
             Skills
           </Typography>
         </Stack>
@@ -33,7 +33,8 @@ const Skills = () => {
         sx={{
           justifyContent: 'center',
           alignItems: 'center',
-          padding: '4rem '
+          padding: '4rem ',
+          backgroundColor: '#00000080'
         }}>
         {MySkills.map((skill) => (
           <Grid item key={skill.id}>
@@ -45,7 +46,7 @@ const Skills = () => {
               key={skill.id}>
               <img src={skill.logo} alt='html-logo' style={{ width: '5rem' }} />
               <Typography
-                color='#ffffff75'
+                color='#ffffff'
                 variant='p'
                 sx={{ marginTop: '8px' }}>
                 {skill.name}

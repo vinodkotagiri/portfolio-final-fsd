@@ -73,8 +73,8 @@ const Contact = () => {
           direction='row'
           gap={2}
           sx={{ justifyContent: 'center', alignItems: 'center' }}>
-          <ContactMail sx={{ fontSize: '32px' }} color='secondary' />
-          <Typography variant='h4' color='secondary'>
+          <ContactMail sx={{ fontSize: '32px',color:'#ffc107' }} />
+          <Typography variant='h4' color='#ffc107'>
             Contact Me
           </Typography>
         </Stack>
@@ -148,7 +148,8 @@ const Contact = () => {
             color='primary'
             variant='contained'
             type='submit'
-            endIcon={<Send />}>
+            endIcon={<Send />}
+            sx={{backgroundColor:'#ffc107'}}>
             Send
           </Button>
         </Stack>

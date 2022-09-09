@@ -29,8 +29,8 @@ const Portfolio = () => {
           direction='row'
           gap={2}
           sx={{ justifyContent: 'center', alignItems: 'center' }}>
-          <Assessment sx={{ fontSize: '32px' }} color='secondary' />
-          <Typography variant='h4' color='secondary'>
+          <Assessment sx={{ fontSize: '32px',color:'#ffc107' }}  />
+          <Typography variant='h4' color='#ffc107'>
             Portfolio
           </Typography>
         </Stack>
@@ -80,7 +80,8 @@ const Portfolio = () => {
                     <Button
                       endIcon={<Preview />}
                       variant='contained'
-                      size='small'>
+                      size='small'
+                      sx={{backgroundColor:'#ffc107'}}>
                       Demo
                     </Button>
                     <Button

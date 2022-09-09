@@ -32,14 +32,14 @@ const Home = () => {
           Hi, There!
         </Typography>
         <Typography
-          color='secondary'
+          color='warning.dark'
           variant='h1'
           sx={{ fontFamily: 'Aboreto', fontSize: '5rem' }}
         >
           I'm, Vinod
         </Typography>
         <Typography
-          color='slateblue'
+          color='success.light'
           variant='h4'
           sx={{
             fontFamily: 'ubuntu',
@@ -59,7 +59,7 @@ const Home = () => {
           <Button
             variant='contained'
             endIcon={<CloudDownload />}
-            sx={{ backgroundColor: '#9C27B0' }}
+            color='success'
             onClick={() =>
               window.open(
                 'https://1drv.ms/b/s!AqUO-r5Zn68aieYq4jZ_LEf9aDFv4A?e=3YBMDP',
