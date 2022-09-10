@@ -51,7 +51,7 @@ const About = () => {
           </Typography>
           <Typography variant='h5' color='#fff'>
             I love to design and build websites.
-            <br /> I am a full stack developer with a focus on ReactJS.
+            <br /> I am a full stack developer with a focus on React and NodeJS.
             <br />I believe in building web applications with a human
             touch,currently seeking a full-time position as web developer with
             an innovative company.
@@ -79,6 +79,7 @@ const About = () => {
           Let's make a great web app together!!
         </Typography>
       </Stack>
+
     </div>
   );
 };

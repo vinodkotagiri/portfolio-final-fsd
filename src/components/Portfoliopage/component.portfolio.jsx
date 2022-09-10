@@ -8,7 +8,7 @@ import {
   CardMedia,
   CardContent,
   CardActions,
-  Paper
+
 } from '@mui/material';
 import ParticlesBg from 'particles-bg';
 import { Assessment, Preview, Code } from '@mui/icons-material';
@@ -17,7 +17,7 @@ import { Projects } from './projects';
 const Portfolio = () => {
   return (
     <div>
-      <ParticlesBg num={5} type='thick' bg={true} />
+      <ParticlesBg num={5} type='thick' bg={true}  />
       <Stack
         sx={{
           justifyContent: 'center',
@@ -44,14 +44,16 @@ const Portfolio = () => {
           marginLeft: '32px'
         }}>
         {Projects.map((project) => (
-          <Grid item key={project.id}>
+          <Grid item key={project.id} >
             <Card
               sx={{
                 maxWidth: { xs: '80%', md: 400 },
                 borderRadius: 5,
                 height: 'auto',
                 width: { xs: '70%', md: 'auto' },
-                boxShadow: '1px 1px 8px 2px #9B27AF'
+                boxShadow: '1px 1px 8px 2px #9B27AF',
+                pointerEvents: 'none',
+                opacity:0.7
               }}>
               <CardMedia
                 component='img'
@@ -105,24 +107,20 @@ const Portfolio = () => {
           </Grid>
         ))}
       </Grid>
-      {/* TEMPORARY OVERLAY: REMOVE AFTER ALL PROJETCS COMPLETED */}
-      <Paper
-        elevation={3}
-        sx={{
-          position: 'fixed',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          height: '100vh',
-          width: '100vw',
-          backgroundColor: '#ffffff30',
-          borderRadius: '2rem',
-          display: 'flex',
-          justifyContent: 'center',
-          zIndex: 100
-        }}>
-        <img src={require('./wip.gif')} alt='wip-logo' />
-      </Paper>
+      <div style={{
+        backgroundColor:'#00000095',
+        textAlign:'center',
+        paddingTop:'30%',
+        height: '100%',
+        width: '100%',
+        zIndex:100,
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+      }}>
+      <Typography variant="h3" color="yellow">⚠️ Work in Progress. . .</Typography>
+      </div>
     </div>
   );
 };
