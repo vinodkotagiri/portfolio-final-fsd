@@ -33,7 +33,7 @@ const Hero = () => {
 					}}>
 					FULLSTACK DEVELOPER
 				</Typography>
-				<Typography variant='h1' sx={{ color: '#25282B' }}>
+				<Typography variant='h2' sx={{ color: '#25282B' }}>
 					Hello,
 					<br />
 					I'm Vinod Kotagiri

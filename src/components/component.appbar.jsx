@@ -11,9 +11,9 @@ import Container from '@mui/material/Container'
 import Button from '@mui/material/Button'
 
 import MenuItem from '@mui/material/MenuItem'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
 
-const pages = ['About', 'Skills', 'Portfolio', 'Blog']
+const pages = ['about', 'skills', 'portfolio', 'contact', 'blog']
 
 const ResponsiveAppBar = () => {
 	const [anchorElNav, setAnchorElNav] = React.useState(null)
@@ -25,7 +25,7 @@ const ResponsiveAppBar = () => {
 	const handleCloseNavMenu = () => {
 		setAnchorElNav(null)
 	}
-
+	const navigate = useNavigate()
 	return (
 		<>
 			<AppBar
@@ -39,14 +39,13 @@ const ResponsiveAppBar = () => {
 							component='a'
 							href='/'
 							sx={{
-								mr: 1,
 								display: { xs: 'none', md: 'flex' },
 								fontFamily: 'Comfortaa',
 								fontWeight: 700,
-								letterSpacing: '.3rem',
 								color: 'inherit',
 								textDecoration: 'none',
-							}}>
+							}}
+							onClick={() => navigate('/')}>
 							VINOD KOTAGIRI
 						</Typography>
 						<Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -77,7 +76,12 @@ const ResponsiveAppBar = () => {
 									display: { xs: 'block', md: 'none' },
 								}}>
 								{pages.map((page) => (
-									<MenuItem key={page} onClick={handleCloseNavMenu}>
+									<MenuItem
+										key={page}
+										onClick={() => {
+											handleCloseNavMenu()
+											navigate(`/${page}`)
+										}}>
 										<Typography textAlign='center'>{page}</Typography>
 									</MenuItem>
 								))}
@@ -90,27 +94,33 @@ const ResponsiveAppBar = () => {
 							component='a'
 							href=''
 							sx={{
-								mr: 1,
 								display: { xs: 'flex', md: 'none' },
 								flexGrow: 1,
 								fontFamily: 'Comfortaa',
-								letterSpacing: '.1rem',
 								color: '#000000',
 								textDecoration: 'none',
-							}}>
+							}}
+							onClick={() => navigate('/')}>
 							VINOD KOTAGIRI
 						</Typography>
 						<Box
 							sx={{
-								marginLeft: '35rem',
+								marginLeft: '30rem',
 								flexGrow: 1,
 								display: { xs: 'none', md: 'flex' },
 							}}>
 							{pages.map((page) => (
 								<Button
 									key={page}
-									onClick={handleCloseNavMenu}
-									sx={{ my: 2, color: 'black', display: 'block' }}>
+									onClick={() => {
+										handleCloseNavMenu()
+										navigate(`/${page}`)
+									}}
+									sx={{
+										my: 2,
+										color: 'black',
+										display: 'block',
+									}}>
 									{page}
 								</Button>
 							))}
