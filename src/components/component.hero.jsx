@@ -33,13 +33,19 @@ const Hero = () => {
 					borderRadius: '33% 25% 25% 50%',
 				}}
 			/>
-			<Stack sx={{ padding: '4rem' }} gap={2}>
+			<Stack
+				sx={{
+					padding: '4rem',
+					justifyContent: 'space-between',
+					marginTop: { xs: '16rem', md: '0' },
+				}}
+				gap={2}>
 				<Typography
 					sx={{
 						fontFamily: 'Nunito',
 						fontSize: '20px',
 						fontWeight: 'bold',
-						color: '#FDC435',
+						color: { xs: '#fff', md: '#FDC435' },
 					}}>
 					FULLSTACK DEVELOPER
 				</Typography>
@@ -54,6 +60,7 @@ const Hero = () => {
 						fontSize: '24px',
 						lineHeight: '150%',
 						color: '#828282',
+						display: { xs: 'none', md: 'flex' },
 					}}>
 					A Fullstack developer with experience in
 					<br />

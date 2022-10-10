@@ -38,7 +38,7 @@ const About = () => {
 						sx={{
 							fontSize: '24px',
 							lineHeight: '150%',
-							color: { xs: '#ffffff', md: '#828282' },
+							color: '#828282',
 							fontFamily: 'Nunito',
 						}}>
 						I am a Fullstack developer with a hands on experience in designing
