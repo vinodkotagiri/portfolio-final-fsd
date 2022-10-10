@@ -2,6 +2,7 @@ import { Typography } from '@mui/material'
 import { Box, Stack } from '@mui/system'
 import shape from './yellowshape.svg'
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const Skills = () => {
 	const skills = [
@@ -104,7 +105,10 @@ const Skills = () => {
 	]
 
 	return (
-		<>
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}>
 			<img
 				src={shape}
 				alt='shape'
@@ -137,7 +141,7 @@ const Skills = () => {
 						sx={{
 							padding: '1.25rem',
 							margin: '0.25rem',
-							width: '10rem',
+							width: { xs: '75vw', md: '10rem' },
 							justifyContent: 'center',
 							alignItems: 'center',
 							border: `1px solid ${skill.color}`,
@@ -165,7 +169,7 @@ const Skills = () => {
 					</Stack>
 				))}
 			</Box>
-		</>
+		</motion.div>
 	)
 }
 

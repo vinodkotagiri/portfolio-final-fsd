@@ -3,13 +3,23 @@ import shape from './yellowshape.svg'
 import { Button, Stack, Typography } from '@mui/material'
 import { VisibilityOutlined, DownloadOutlined } from '@mui/icons-material'
 import vinimg from './cartoonified.jpg'
+import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 const Hero = () => {
 	return (
-		<>
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}>
 			<img
 				src={shape}
 				alt='shape'
-				style={{ position: 'absolute', top: 0, right: 0, zIndex: -100 }}
+				style={{
+					position: 'absolute',
+					top: 0,
+					right: 0,
+					zIndex: -100,
+				}}
 			/>
 			<img
 				src={vinimg}
@@ -52,21 +62,29 @@ const Hero = () => {
 					scalabale and maintainalble web applications.{' '}
 				</Typography>
 				<Stack direction='row' gap={3} my={4}>
-					<Button
-						startIcon={<VisibilityOutlined />}
-						variant='contained'
-						sx={{ backgroundColor: '#FDC435', color: '#25282B' }}>
-						Portfolio
-					</Button>
+					<Link to='/portfolio'>
+						<Button
+							startIcon={<VisibilityOutlined />}
+							variant='contained'
+							sx={{ backgroundColor: '#FDC435', color: '#25282B' }}>
+							Portfolio
+						</Button>
+					</Link>
 					<Button
 						startIcon={<DownloadOutlined />}
 						variant='outlined'
-						sx={{ color: '#25282B' }}>
+						sx={{ color: '#25282B' }}
+						onClick={() =>
+							window.open(
+								'https://1drv.ms/w/s!AqUO-r5Zn68aieZ2IevSuPESmOcpjg?e=e3dDPN',
+								'_bank'
+							)
+						}>
 						Resume
 					</Button>
 				</Stack>
 			</Stack>
-		</>
+		</motion.div>
 	)
 }
 

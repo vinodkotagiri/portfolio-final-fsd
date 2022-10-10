@@ -13,7 +13,7 @@ import Button from '@mui/material/Button'
 import MenuItem from '@mui/material/MenuItem'
 import { Outlet, useNavigate } from 'react-router-dom'
 
-const pages = ['about', 'skills', 'portfolio', 'contact', 'blog']
+const pages = ['About', 'Skills', 'Portfolio', 'Contact', 'Blog']
 
 const ResponsiveAppBar = () => {
 	const [anchorElNav, setAnchorElNav] = React.useState(null)
@@ -40,13 +40,14 @@ const ResponsiveAppBar = () => {
 							href='/'
 							sx={{
 								display: { xs: 'none', md: 'flex' },
-								fontFamily: 'Comfortaa',
-								fontWeight: 700,
-								color: 'inherit',
+								fontFamily: 'Great Vibes',
+								fontSize: '2rem',
+								color: '#FDC435',
+								fontWeight: 'bold',
 								textDecoration: 'none',
 							}}
 							onClick={() => navigate('/')}>
-							VINOD KOTAGIRI
+							Vinod Kotagiri
 						</Typography>
 						<Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
 							<IconButton
@@ -80,7 +81,7 @@ const ResponsiveAppBar = () => {
 										key={page}
 										onClick={() => {
 											handleCloseNavMenu()
-											navigate(`/${page}`)
+											navigate(`/${page.toLocaleLowerCase()}`)
 										}}>
 										<Typography textAlign='center'>{page}</Typography>
 									</MenuItem>
@@ -96,12 +97,14 @@ const ResponsiveAppBar = () => {
 							sx={{
 								display: { xs: 'flex', md: 'none' },
 								flexGrow: 1,
-								fontFamily: 'Comfortaa',
-								color: '#000000',
+								fontFamily: 'Great Vibes',
+								fontSize: '2rem',
+								color: '#828282',
+								fontWeight: 'bold',
 								textDecoration: 'none',
 							}}
 							onClick={() => navigate('/')}>
-							VINOD KOTAGIRI
+							Vinod Kotagiri
 						</Typography>
 						<Box
 							sx={{

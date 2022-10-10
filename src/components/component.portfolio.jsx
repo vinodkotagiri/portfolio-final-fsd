@@ -3,7 +3,7 @@ import { Button, Paper, Typography } from '@mui/material'
 import shape from './yellowshape.svg'
 import { Box, Stack } from '@mui/system'
 import { VisibilityRounded, CodeRounded } from '@mui/icons-material'
-
+import { motion } from 'framer-motion'
 const Portfolio = () => {
 	const projects = [
 		{
@@ -41,7 +41,10 @@ const Portfolio = () => {
 	]
 
 	return (
-		<>
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}>
 			<img
 				src={shape}
 				alt='shape'
@@ -75,8 +78,8 @@ const Portfolio = () => {
 					<Paper
 						elevation={3}
 						sx={{
-							padding: '0.5rem 1.25rem',
-							width: '35vw',
+							padding: '1.25rem 1.25rem',
+							width: { xs: '100vw', md: '35vw' },
 							borderRadius: '1.2rem',
 							backgroundImage: `url(${project.logo})`,
 							backround: 'cover',
@@ -118,9 +121,19 @@ const Portfolio = () => {
 									</Button>
 									<Button
 										startIcon={<CodeRounded />}
-										variant='outlined'
+										variant='contained'
+										color='secondary'
+										sx={{ width: 'fit-content' }}
+										size='small'>
+										Frontend Code
+									</Button>
+									<Button
+										startIcon={<CodeRounded />}
+										variant='contained'
+										color='primary'
+										size='small'
 										sx={{ width: 'fit-content' }}>
-										Source code
+										Backend Code
 									</Button>
 								</Stack>
 							</Stack>
@@ -128,7 +141,7 @@ const Portfolio = () => {
 					</Paper>
 				))}
 			</Box>
-		</>
+		</motion.div>
 	)
 }
 
