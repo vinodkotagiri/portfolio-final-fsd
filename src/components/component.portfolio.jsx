@@ -13,6 +13,9 @@ const Portfolio = () => {
 			logo: 'https://res.cloudinary.com/vinodkotagiri/image/upload/v1665332004/My%20Websites%20assets/portfolio-projects/storyio_bbq3ft.jpg',
 			description:
 				'story.io pays respects to the power of the human experience and brings it to the forefront. We believe in taking what you love about writing, developing and designing and building a system that helps you create content quickly and effortlessly.',
+			deployedUrl: 'https://ytgold.netlify.app',
+			feSource: 'https://github.com/vinodkotagiri/pfolio-storyio-frontend',
+			beSource: 'https://github.com/vinodkotagiri/pfolio-storyio-backend',
 		},
 		{
 			id: '2',
@@ -21,6 +24,9 @@ const Portfolio = () => {
 			logo: 'https://res.cloudinary.com/vinodkotagiri/image/upload/c_thumb,h_528,w_2707/v1665333839/My%20Websites%20assets/portfolio-projects/scart_r8en6w.jpg',
 			description:
 				'S-cart is an e-commerce website, where you can find products that you need. You can also use our many useful features to enhance your experience when shopping on our site.',
+			deployedUrl: 'https://ytgold.netlify.app',
+			feSource: 'https://github.com/vinodkotagiri/pfolio-scart-frontend',
+			beSource: 'https://github.com/vinodkotagiri/pfolio-scart-backend-',
 		},
 		{
 			id: '3',
@@ -29,6 +35,9 @@ const Portfolio = () => {
 			logo: 'https://res.cloudinary.com/vinodkotagiri/image/upload/v1665334654/My%20Websites%20assets/portfolio-projects/membook_sztp5t.jpg',
 			description:
 				'Membook is a social media platform that makes it easy to stay connected with friends and family. With Membook you can easily post photos, share audio and video recordings, create posts and more.',
+			deployedUrl: 'https://ytgold.netlify.app',
+			feSource: '',
+			beSource: '',
 		},
 		{
 			id: '4',
@@ -37,6 +46,20 @@ const Portfolio = () => {
 			logo: 'https://res.cloudinary.com/vinodkotagiri/image/upload/v1665335112/My%20Websites%20assets/portfolio-projects/nuchat_uirfod.jpg',
 			description:
 				'Connect and collaborate with people, businesses, and partners. nu.chat is a messenger app that puts you in control over how much information your friends know about you.',
+			deployedUrl: 'https://ytgold.netlify.app',
+			feSource: '',
+			beSource: '',
+		},
+		{
+			id: '5',
+			name: 'ytGold',
+			subtitle: 'A Youtube Clone',
+			logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/YouTube_play_buttom_dark_icon_%282013-2017%29.svg/1280px-YouTube_play_buttom_dark_icon_%282013-2017%29.svg.png',
+			description:
+				'ytGold is a youtube clone application built using React and MaterialUI utilizing Rapid Api Youtube v3',
+			deployedUrl: 'https://ytgold.netlify.app',
+			feSource: 'https://github.com/vinodkotagiri/ytgold-youtubeClone',
+			beSource: null,
 		},
 	]
 
@@ -116,25 +139,38 @@ const Portfolio = () => {
 									<Button
 										startIcon={<VisibilityRounded />}
 										variant='contained'
-										sx={{ width: 'fit-content', backgroundColor: '#FDC435' }}>
+										sx={{ width: 'fit-content', backgroundColor: '#FDC435' }}
+										onClick={() =>
+											window.open(`${project.deployedUrl}`, '_blank')
+										}>
 										Preview
 									</Button>
-									<Button
-										startIcon={<CodeRounded />}
-										variant='contained'
-										color='secondary'
-										sx={{ width: 'fit-content' }}
-										size='small'>
-										Frontend Code
-									</Button>
-									<Button
-										startIcon={<CodeRounded />}
-										variant='contained'
-										color='primary'
-										size='small'
-										sx={{ width: 'fit-content' }}>
-										Backend Code
-									</Button>
+									{project.feSource && (
+										<Button
+											startIcon={<CodeRounded />}
+											variant='contained'
+											color='secondary'
+											sx={{ width: 'fit-content' }}
+											size='small'
+											onClick={() =>
+												window.open(`${project.feSource}`, '_blank')
+											}>
+											Frontend Code
+										</Button>
+									)}
+									{project.beSource && (
+										<Button
+											startIcon={<CodeRounded />}
+											variant='contained'
+											color='primary'
+											size='small'
+											sx={{ width: 'fit-content' }}
+											onClick={() =>
+												window.open(`${project.beSource}`, '_blank')
+											}>
+											> Backend Code
+										</Button>
+									)}
 								</Stack>
 							</Stack>
 						</Stack>

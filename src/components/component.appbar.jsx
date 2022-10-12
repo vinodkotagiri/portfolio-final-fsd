@@ -11,12 +11,21 @@ import Container from '@mui/material/Container'
 import Button from '@mui/material/Button'
 
 import MenuItem from '@mui/material/MenuItem'
-import { Outlet, useNavigate } from 'react-router-dom'
+import { Outlet, useLocation, useNavigate } from 'react-router-dom'
 
 const pages = ['About', 'Skills', 'Portfolio', 'Contact', 'Blog']
 
 const ResponsiveAppBar = () => {
 	const [anchorElNav, setAnchorElNav] = React.useState(null)
+
+	const location = useLocation()
+	const isActive = (location, path) => {
+		if (location.pathname === path) {
+			return { backgroundColor: '#828282', color: '#e3be4d' }
+		} else {
+			return { color: '#ffffff' }
+		}
+	}
 
 	const handleOpenNavMenu = (event) => {
 		setAnchorElNav(event.currentTarget)
@@ -87,7 +96,8 @@ const ResponsiveAppBar = () => {
 											handleCloseNavMenu()
 											navigate(`/${page.toLocaleLowerCase()}`)
 										}}
-										sx={{ backgroundColor: '#FDC435' }}>
+										sx={{ backgroundColor: '#FDC435' }}
+										style={isActive(location, `/${page.toLocaleLowerCase()}`)}>
 										<Typography textAlign='center'>{page}</Typography>
 									</MenuItem>
 								))}
