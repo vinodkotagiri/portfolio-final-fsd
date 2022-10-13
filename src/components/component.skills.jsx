@@ -102,6 +102,12 @@ const Skills = () => {
 			logo: 'https://res.cloudinary.com/vinodkotagiri/image/upload/v1665330282/My%20Websites%20assets/logos/linux_jmb4gj.svg',
 			color: '#ffcc21',
 		},
+		{
+			id: '17',
+			name: 'Tailwind',
+			logo: 'https://res.cloudinary.com/vinodkotagiri/image/upload/v1665684497/My%20Websites%20assets/logos/tailwind_vxpk6j.svg',
+			color: '#44a8b3',
+		},
 	]
 
 	return (
@@ -132,7 +138,12 @@ const Skills = () => {
 			<Box
 				my={6}
 				mx={5}
-				sx={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+				sx={{
+					display: 'flex',
+					flexWrap: 'wrap',
+					gap: '1rem',
+					justifyContent: 'center',
+				}}>
 				{skills.map((skill) => (
 					<Stack
 						key={skill.id}
@@ -141,8 +152,8 @@ const Skills = () => {
 						sx={{
 							padding: '1.25rem',
 							margin: '0.25rem',
-							width: { xs: '75vw', md: '10rem' },
-							justifyContent: 'center',
+							width: { xs: '75vw', md: '18rem' },
+							justifyContent: 'start',
 							alignItems: 'center',
 							border: `1px solid ${skill.color}`,
 							backgroundColor: '#00000015',

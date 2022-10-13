@@ -37,9 +37,7 @@ const ResponsiveAppBar = () => {
 	const navigate = useNavigate()
 	return (
 		<>
-			<AppBar
-				position='static'
-				sx={{ background: 'transparent', color: '#000000' }}>
+			<AppBar position='sticky' sx={{ background: '#ffffff95' }}>
 				<Container>
 					<Toolbar>
 						<Typography

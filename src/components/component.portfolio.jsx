@@ -1,16 +1,16 @@
 import React from 'react'
-import { Button, Paper, Typography } from '@mui/material'
 import shape from './yellowshape.svg'
-import { Box, Stack } from '@mui/system'
-import { VisibilityRounded, CodeRounded } from '@mui/icons-material'
+import { Box, Typography } from '@mui/material'
 import { motion } from 'framer-motion'
+import PortfolioCard from './component.portfolioCard'
 const Portfolio = () => {
 	const projects = [
 		{
 			id: '1',
-			name: 'story.io',
+			name: 'WRITZER',
 			subtitle: 'content management system',
-			logo: 'https://res.cloudinary.com/vinodkotagiri/image/upload/v1665332004/My%20Websites%20assets/portfolio-projects/storyio_bbq3ft.jpg',
+			cover:
+				'https://res.cloudinary.com/vinodkotagiri/image/upload/v1665332004/My%20Websites%20assets/portfolio-projects/storyio_bbq3ft.jpg',
 			description:
 				'story.io pays respects to the power of the human experience and brings it to the forefront. We believe in taking what you love about writing, developing and designing and building a system that helps you create content quickly and effortlessly.',
 			deployedUrl: 'https://ytgold.netlify.app',
@@ -19,9 +19,10 @@ const Portfolio = () => {
 		},
 		{
 			id: '2',
-			name: 's-Cart',
+			name: 'BizBook.io',
 			subtitle: 'An E-Commerce application',
-			logo: 'https://res.cloudinary.com/vinodkotagiri/image/upload/c_thumb,h_528,w_2707/v1665333839/My%20Websites%20assets/portfolio-projects/scart_r8en6w.jpg',
+			cover:
+				'https://res.cloudinary.com/vinodkotagiri/image/upload/c_thumb,h_528,w_2707/v1665333839/My%20Websites%20assets/portfolio-projects/scart_r8en6w.jpg',
 			description:
 				'S-cart is an e-commerce website, where you can find products that you need. You can also use our many useful features to enhance your experience when shopping on our site.',
 			deployedUrl: 'https://ytgold.netlify.app',
@@ -30,9 +31,10 @@ const Portfolio = () => {
 		},
 		{
 			id: '3',
-			name: 'memBook',
+			name: 'yepsocial',
 			subtitle: 'A social media application',
-			logo: 'https://res.cloudinary.com/vinodkotagiri/image/upload/v1665334654/My%20Websites%20assets/portfolio-projects/membook_sztp5t.jpg',
+			cover:
+				'https://res.cloudinary.com/vinodkotagiri/image/upload/v1665334654/My%20Websites%20assets/portfolio-projects/membook_sztp5t.jpg',
 			description:
 				'Membook is a social media platform that makes it easy to stay connected with friends and family. With Membook you can easily post photos, share audio and video recordings, create posts and more.',
 			deployedUrl: 'https://ytgold.netlify.app',
@@ -41,9 +43,10 @@ const Portfolio = () => {
 		},
 		{
 			id: '4',
-			name: 'nu.chat',
+			name: 'chatterbeak',
 			subtitle: 'A Messaging Service',
-			logo: 'https://res.cloudinary.com/vinodkotagiri/image/upload/v1665335112/My%20Websites%20assets/portfolio-projects/nuchat_uirfod.jpg',
+			cover:
+				'https://res.cloudinary.com/vinodkotagiri/image/upload/v1665335112/My%20Websites%20assets/portfolio-projects/nuchat_uirfod.jpg',
 			description:
 				'Connect and collaborate with people, businesses, and partners. nu.chat is a messenger app that puts you in control over how much information your friends know about you.',
 			deployedUrl: 'https://ytgold.netlify.app',
@@ -54,11 +57,24 @@ const Portfolio = () => {
 			id: '5',
 			name: 'ytGold',
 			subtitle: 'A Youtube Clone',
-			logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/YouTube_play_buttom_dark_icon_%282013-2017%29.svg/1280px-YouTube_play_buttom_dark_icon_%282013-2017%29.svg.png',
+			cover:
+				'https://res.cloudinary.com/vinodkotagiri/image/upload/v1665683266/My%20Websites%20assets/portfolio-projects/ytgold-cover_b8ydxt.jpg',
 			description:
 				'ytGold is a youtube clone application built using React and MaterialUI utilizing Rapid Api Youtube v3',
 			deployedUrl: 'https://ytgold.netlify.app',
 			feSource: 'https://github.com/vinodkotagiri/ytgold-youtubeClone',
+			beSource: null,
+		},
+		{
+			id: '5',
+			name: 'stream rhythm',
+			subtitle: 'Music Streaming App',
+			cover:
+				'https://res.cloudinary.com/vinodkotagiri/image/upload/v1665683269/My%20Websites%20assets/portfolio-projects/stream-rhythm-cover_ii9iqm.jpg',
+			description:
+				'stream rhythm is a music streaming app built using ShazamCore Api using React',
+			deployedUrl: 'https://stream-rhythm.netlify.app',
+			feSource: 'https://github.com/vinodkotagiri/stream-rhythm-musicapp',
 			beSource: null,
 		},
 	]
@@ -95,86 +111,11 @@ const Portfolio = () => {
 					flexWrap: 'wrap',
 					padding: '1rem',
 					gap: '2rem',
-					justifyContent: 'center',
+					justifyContent: 'start',
+					my: 2,
 				}}>
-				{projects.map((project) => (
-					<Paper
-						elevation={3}
-						sx={{
-							padding: '1.25rem 1.25rem',
-							width: { xs: '100vw', md: '35vw' },
-							borderRadius: '1.2rem',
-							backgroundImage: `url(${project.logo})`,
-							backround: 'cover',
-						}}>
-						<Stack direction='row' sx={{ justifyContent: 'space-around' }}>
-							<Stack
-								gap={3}
-								sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
-								<Typography variant='h3' sx={{ color: '#FDC435' }}>
-									{project.name}
-									<span
-										style={{
-											fontSize: '0.5em',
-											color: '#fdc43590',
-											textTransform: 'capitalize',
-										}}>
-										&nbsp;({project.subtitle})
-									</span>
-								</Typography>
-
-								<Typography
-									sx={{
-										fontFamily: 'Nunito',
-										fontSize: '20px',
-										color: '#828282',
-										textAlign: 'justify',
-									}}>
-									{project.description}
-								</Typography>
-								<Stack
-									direction='row'
-									gap={4}
-									sx={{ justifyContent: 'flex-start', marginBottom: '2rem' }}>
-									<Button
-										startIcon={<VisibilityRounded />}
-										variant='contained'
-										sx={{ width: 'fit-content', backgroundColor: '#FDC435' }}
-										onClick={() =>
-											window.open(`${project.deployedUrl}`, '_blank')
-										}>
-										Preview
-									</Button>
-									{project.feSource && (
-										<Button
-											startIcon={<CodeRounded />}
-											variant='contained'
-											color='secondary'
-											sx={{ width: 'fit-content' }}
-											size='small'
-											onClick={() =>
-												window.open(`${project.feSource}`, '_blank')
-											}>
-											Frontend Code
-										</Button>
-									)}
-									{project.beSource && (
-										<Button
-											startIcon={<CodeRounded />}
-											variant='contained'
-											color='primary'
-											size='small'
-											sx={{ width: 'fit-content' }}
-											onClick={() =>
-												window.open(`${project.beSource}`, '_blank')
-											}>
-											> Backend Code
-										</Button>
-									)}
-								</Stack>
-							</Stack>
-						</Stack>
-					</Paper>
+				{projects.map((project, i) => (
+					<PortfolioCard key={i} project={project} />
 				))}
 			</Box>
 		</motion.div>
