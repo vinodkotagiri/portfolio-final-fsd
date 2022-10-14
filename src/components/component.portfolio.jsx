@@ -66,7 +66,7 @@ const Portfolio = () => {
 			beSource: null,
 		},
 		{
-			id: '5',
+			id: '6',
 			name: 'stream rhythm',
 			subtitle: 'Music Streaming App',
 			cover:
@@ -75,6 +75,18 @@ const Portfolio = () => {
 				'stream rhythm is a music streaming app built using ShazamCore Api using React',
 			deployedUrl: 'https://stream-rhythm.netlify.app',
 			feSource: 'https://github.com/vinodkotagiri/stream-rhythm-musicapp',
+			beSource: null,
+		},
+		{
+			id: '7',
+			name: 'SCREEN PULP',
+			subtitle: 'OTT Platform',
+			cover:
+				'https://res.cloudinary.com/vinodkotagiri/image/upload/v1665751627/My%20Websites%20assets/portfolio-projects/screen-pulp/stream-pulp-home-cover_zw06hc.jpg',
+			description:
+				'SCREEN PULP is a OTT streaming app built using TMIDB Api using React with Firebase Authentication',
+			deployedUrl: 'screen-pulp.netlify.app',
+			feSource: 'https://github.com/vinodkotagiri/screen-pulp-frontend',
 			beSource: null,
 		},
 	]

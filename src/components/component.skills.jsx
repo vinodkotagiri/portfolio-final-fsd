@@ -108,6 +108,12 @@ const Skills = () => {
 			logo: 'https://res.cloudinary.com/vinodkotagiri/image/upload/v1665684497/My%20Websites%20assets/logos/tailwind_vxpk6j.svg',
 			color: '#44a8b3',
 		},
+		{
+			id: '18',
+			name: 'Firebase',
+			logo: 'https://res.cloudinary.com/vinodkotagiri/image/upload/v1665770353/My%20Websites%20assets/logos/firebase_jbse13.svg',
+			color: '#f68304',
+		},
 	]
 
 	return (
