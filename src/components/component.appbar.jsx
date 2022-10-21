@@ -13,19 +13,12 @@ import Button from '@mui/material/Button'
 import MenuItem from '@mui/material/MenuItem'
 import { Outlet, useLocation, useNavigate } from 'react-router-dom'
 
-const pages = ['About', 'Skills', 'Portfolio', 'Contact', 'Blog']
+const pages = ['Home', 'About', 'Skills', 'Portfolio', 'Contact', 'Blog']
 
 const ResponsiveAppBar = () => {
 	const [anchorElNav, setAnchorElNav] = React.useState(null)
 
 	const location = useLocation()
-	const isActive = (location, path) => {
-		if (location.pathname === path) {
-			return { backgroundColor: '#828282', color: '#e3be4d' }
-		} else {
-			return { color: '#ffffff' }
-		}
-	}
 
 	const handleOpenNavMenu = (event) => {
 		setAnchorElNav(event.currentTarget)
@@ -37,25 +30,27 @@ const ResponsiveAppBar = () => {
 	const navigate = useNavigate()
 	return (
 		<>
-			<AppBar position='sticky' sx={{ background: '#ffffff95' }}>
+			<AppBar position='sticky' sx={{ background: '#5f3dc4' }}>
 				<Container>
 					<Toolbar>
-						<Typography
-							variant='h6'
-							noWrap
-							component='a'
-							href='/'
-							sx={{
-								display: { xs: 'none', md: 'flex' },
-								fontFamily: 'Great Vibes',
-								fontSize: '2rem',
-								color: '#FDC435',
-								fontWeight: 'bold',
-								textDecoration: 'none',
-							}}
-							onClick={() => navigate('/')}>
-							Vinod Kotagiri
-						</Typography>
+						<Box px={2}>
+							<Typography
+								variant='h6'
+								noWrap
+								component='a'
+								href='/'
+								sx={{
+									display: { xs: 'none', md: 'flex' },
+									fontFamily: 'Great Vibes',
+									fontSize: '2rem',
+									color: '#000',
+									fontWeight: 'bold',
+									textDecoration: 'none',
+								}}
+								onClick={() => navigate('/')}>
+								Vinod Kotagiri
+							</Typography>
+						</Box>
 						<Box
 							sx={{
 								flexGrow: 1,
@@ -92,10 +87,9 @@ const ResponsiveAppBar = () => {
 										key={page}
 										onClick={() => {
 											handleCloseNavMenu()
-											navigate(`/${page.toLocaleLowerCase()}`)
+											navigate(`${page.toLocaleLowerCase()}`)
 										}}
-										sx={{ backgroundColor: '#FDC435' }}
-										style={isActive(location, `/${page.toLocaleLowerCase()}`)}>
+										sx={{ backgroundColor: '#5f3dc4' }}>
 										<Typography textAlign='center'>{page}</Typography>
 									</MenuItem>
 								))}
@@ -136,9 +130,14 @@ const ResponsiveAppBar = () => {
 										my: 2,
 										color: 'black',
 										display: 'block',
-										'&:active,&.Mui-active': { backgroundColor: 'red' },
-									}}>
+									}}
+									style={
+										location.pathname === `/${page}`
+											? { borderBottom: '2px solid white', color: 'white' }
+											: { backgroundColor: '' }
+									}>
 									{page}
+									{console.log(location.pathname, '/' + page)}
 								</Button>
 							))}
 						</Box>

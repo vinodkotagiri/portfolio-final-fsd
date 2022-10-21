@@ -65,7 +65,7 @@ const Contact = () => {
 				variant='h3'
 				sx={{
 					textAlign: 'center',
-					borderBottom: '4px double #FDC435',
+					borderBottom: '4px double #5F3DC4',
 					fontFamily: 'Nunito',
 				}}>
 				Contact me
@@ -83,7 +83,7 @@ const Contact = () => {
 					required
 					id='outlined-required'
 					label='Name'
-					sx={{ width: '66%' }}
+					sx={{ width: '66%', backgroundColor: '#fff' }}
 					value={name}
 					onChange={(e) => setName(e.target.value)}
 				/>
@@ -92,7 +92,7 @@ const Contact = () => {
 					id='outlined-required'
 					label='Email Address'
 					type='email'
-					sx={{ width: '66%' }}
+					sx={{ width: '66%', backgroundColor: '#fff' }}
 					value={email}
 					onChange={(e) => setEmail(e.target.value)}
 				/>
@@ -100,7 +100,7 @@ const Contact = () => {
 					required
 					id='outlined-required'
 					label='Phone Number'
-					sx={{ width: '66%' }}
+					sx={{ width: '66%', backgroundColor: '#fff' }}
 					value={phone}
 					onChange={(e) => setPhone(e.target.value)}
 				/>

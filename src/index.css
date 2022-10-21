@@ -7,8 +7,6 @@ html {
 body {
 	margin: 0;
 	padding: 0;
-}
-
-.nav-btn {
-	color: 'red' !important;
+	background-color: black;
+	color: ghostwhite;
 }

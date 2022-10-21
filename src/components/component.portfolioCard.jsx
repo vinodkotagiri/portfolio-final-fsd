@@ -5,35 +5,36 @@ import {
 	CardContent,
 	CardMedia,
 	Typography,
-	Stack,
-	Modal,
 } from '@mui/material'
+import { PublicRounded } from '@mui/icons-material'
+import React from 'react'
 
-import React, { useState } from 'react'
+// const style = {
+// 	position: 'absolute',
+// 	top: '50%',
+// 	left: '50%',
+// 	transform: 'translate(-50%, -50%)',
+// 	width: 400,
+// 	height: 200,
+// 	bgcolor: 'background.paper',
+// 	boxShadow: 24,
+// 	p: 4,
+// 	pt: 6,
+// }
 
-const style = {
-	position: 'absolute',
-	top: '50%',
-	left: '50%',
-	transform: 'translate(-50%, -50%)',
-	width: 400,
-	height: 200,
-	bgcolor: 'background.paper',
-	boxShadow: 24,
-	p: 4,
-	pt: 6,
-}
+// const truncate = (text, chars) => {
+// 	return text.substring(0, chars) + '...'
+// }
 
 const PortfolioCard = ({ project }) => {
-	const [openCodeModal, setOpenCodeModal] = useState(false)
 	return (
 		<Box sx={{ position: 'relative' }}>
 			<Card
 				sx={{
-					width: '100%',
+					width: '95%',
 					maxWidth: 345,
 					minWidth: 345,
-					backgroundColor: '#ffffff40',
+					backgroundColor: '#3b4252',
 				}}>
 				<CardMedia
 					component='img'
@@ -45,18 +46,27 @@ const PortfolioCard = ({ project }) => {
 					<Typography
 						variant='h6'
 						color='primary.light'
-						sx={{ fontWeight: 'bold' }}>
+						sx={{ fontWeight: 'bold', color: '#fff' }}>
 						{project.name}
 					</Typography>
 					<Typography
 						variant='p'
 						color='text.secondary'
 						sx={{ fontWeight: 'bold' }}>
-						{project.description}
+						{project.subtitle}
 					</Typography>
+					<Box>
+						<Button
+							startIcon={<PublicRounded />}
+							variant='outlined'
+							sx={{ margin: '1rem 0', float: 'right' }}
+							onClick={() => window.open(project.deployedUrl)}>
+							Visit
+						</Button>
+					</Box>
 				</CardContent>
 			</Card>
-			<Box
+			{/* <Box
 				sx={{
 					'&:hover': {
 						backgroundColor: '#ff8c0090',
@@ -95,8 +105,8 @@ const PortfolioCard = ({ project }) => {
 						Code
 					</Button>
 				</Stack>
-			</Box>
-			<Modal
+			</Box> */}
+			{/* <Modal
 				style={style}
 				open={openCodeModal}
 				onClose={() => setOpenCodeModal(false)}>
@@ -125,7 +135,7 @@ const PortfolioCard = ({ project }) => {
 						)}
 					</Stack>
 				</Box>
-			</Modal>
+			</Modal> */}
 		</Box>
 	)
 }

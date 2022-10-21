@@ -6,7 +6,7 @@ import Skills from './components/component.skills'
 import Portfolio from './components/component.portfolio'
 import Contact from './components/component.contact'
 import Blog from './components/component.blog'
-import { Route, Routes, useLocation } from 'react-router-dom'
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 
 import { AnimatePresence } from 'framer-motion'
 const App = () => {
@@ -16,6 +16,7 @@ const App = () => {
 			<Routes location={location} key={location.pathname}>
 				<Route path='/' element={<Appbar />}>
 					<Route index element={<Hero />} />
+					<Route path='*' element={<Navigate to='/' />} />
 					<Route path='about' element={<About />} />
 					<Route path='skills' element={<Skills />} />
 					<Route path='portfolio' element={<Portfolio />} />

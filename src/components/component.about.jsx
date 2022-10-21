@@ -4,6 +4,8 @@ import { Box } from '@mui/system'
 import { LinkedIn, GitHub, Twitter } from '@mui/icons-material'
 import shape from './yellowshape.svg'
 import { motion } from 'framer-motion'
+import vinimg from './vinu_full_webp.png'
+
 const About = () => {
 	return (
 		<motion.div
@@ -25,7 +27,7 @@ const About = () => {
 				variant='h3'
 				sx={{
 					textAlign: 'center',
-					borderBottom: '4px double #FDC435',
+					borderBottom: '4px double #5f3dc4',
 					fontFamily: 'Nunito',
 				}}>
 				About me
@@ -41,16 +43,16 @@ const About = () => {
 							color: '#828282',
 							fontFamily: 'Nunito',
 						}}>
-						I am a Fullstack developer with a hands on experience in designing
-						and developing modern web applications. Developing the UI using
-						modern frontend libraries Bootstrap, MaterialUI, AntDesign, and
-						React along with backend development with NodeJS and python.Good at
-						designing RESTful API services using Express and database operations
-						with MongoDB and MySQL.
+						Tech-Savy Full Stack Web Developer proficient in fundamental
+						front-end languages and server-side languages. In-depth knowledge of
+						JavaScript, React, NodeJs, MongoDB and MySQL. Analytical and precise
+						professional looking forward to take charge of front-end and
+						back-end development. Skillful creating servers and databases for
+						functionality, designing and developing API's.
 					</Typography>
 					<Stack direction='row' gap={4} mx={6} my={6}>
 						<LinkedIn
-							sx={{ fontSize: '3.5rem', cursor: 'pointer', color: '#FDC435' }}
+							sx={{ fontSize: '3.5rem', cursor: 'pointer', color: '#5f3dc4' }}
 							onClick={() =>
 								window.open(
 									'https://www.linkedin.com/in/kotagiri-vinod-a10ba856/'
@@ -58,13 +60,13 @@ const About = () => {
 							}
 						/>
 						<GitHub
-							sx={{ fontSize: '3.5rem', cursor: 'pointer', color: '#FDC435' }}
+							sx={{ fontSize: '3.5rem', cursor: 'pointer', color: '#5f3dc4' }}
 							onClick={() =>
 								window.open('https://www.github.com/vinodkotagiri')
 							}
 						/>
 						<Twitter
-							sx={{ fontSize: '3.5rem', cursor: 'pointer', color: '#FDC435' }}
+							sx={{ fontSize: '3.5rem', cursor: 'pointer', color: '#5f3dc4' }}
 							onClick={() => window.open('https://twitter.com/vinodkotagiri')}
 						/>
 					</Stack>
@@ -74,15 +76,15 @@ const About = () => {
 					sx={{
 						width: '400px',
 						height: '400px',
-						backgroundColor: '#FDC435',
+						backgroundColor: '#5F3DC4',
 						borderRadius: '50% 25%',
 						display: { xs: 'none', md: 'flex' },
 					}}>
 					<img
-						src='https://res.cloudinary.com/vinodkotagiri/image/upload/b_rgb:fdc435/v1662539401/My%20Websites%20assets/vinu_ixjx9s.png'
+						src={vinimg}
 						alt='hbd'
 						style={{
-							width: '340px',
+							width: '480px',
 							borderRadius: '65% 33%',
 						}}
 					/>

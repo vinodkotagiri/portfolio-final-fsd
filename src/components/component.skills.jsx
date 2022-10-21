@@ -114,6 +114,12 @@ const Skills = () => {
 			logo: 'https://res.cloudinary.com/vinodkotagiri/image/upload/v1665770353/My%20Websites%20assets/logos/firebase_jbse13.svg',
 			color: '#f68304',
 		},
+		{
+			id: '19',
+			name: 'Redux',
+			logo: 'https://res.cloudinary.com/vinodkotagiri/image/upload/v1665899459/My%20Websites%20assets/logos/redux_urlu7c.svg',
+			color: '#7749bd',
+		},
 	]
 
 	return (
@@ -136,7 +142,7 @@ const Skills = () => {
 				variant='h3'
 				sx={{
 					textAlign: 'center',
-					borderBottom: '4px double #FDC435',
+					borderBottom: '4px double #5f3dc4',
 					fontFamily: 'Nunito',
 				}}>
 				Skills
