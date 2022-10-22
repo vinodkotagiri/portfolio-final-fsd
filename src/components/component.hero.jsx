@@ -88,8 +88,8 @@ const Hero = () => {
 						sx={{ color: '#fff', padding: '0 1rem' }}
 						onClick={() =>
 							window.open(
-								'https://1drv.ms/w/s!AqUO-r5Zn68aieZ2IevSuPESmOcpjg?e=e3dDPN',
-								'_bank'
+								'https://1drv.ms/w/s!AqUO-r5Zn68aiexz71Vc0Zuu0TWI9g?e=8HxjCm',
+								'_blank'
 							)
 						}>
 						Resume
