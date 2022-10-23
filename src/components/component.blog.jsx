@@ -6,11 +6,11 @@ import { CircularProgress } from '@mui/material'
 import { DoneAll } from '@mui/icons-material'
 const Blog = () => {
 	const [loading, setLoading] = useState(true)
-
 	useEffect(() => {
+		const windowRef = window.open()
 		setTimeout(() => {
 			setLoading(false)
-			return window.open('https://medium.com/@vinodkotagiri', '_blank')
+			windowRef.location = 'https://medium.com/@vinodkotagiri'
 		}, 2500)
 	}, [])
 
