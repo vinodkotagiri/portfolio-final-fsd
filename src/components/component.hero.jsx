@@ -68,7 +68,7 @@ const Hero = () => {
 					<br />
 					designing and developing modern, responsive,
 					<br />
-					scalabale and maintainalble web applications.{' '}
+					scalabale and maintainable web applications.{' '}
 				</Typography>
 				<Stack direction='row' gap={3} my={4}>
 					<Link to='/Portfolio'>

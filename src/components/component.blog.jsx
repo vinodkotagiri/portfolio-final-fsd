@@ -8,7 +8,7 @@ const Blog = () => {
 	const [loading, setLoading] = useState(true)
 
 	const openBlog = () => {
-		window.open('https://medium.com/@vinodkotagiri')
+		window.open('https://medium.com/@vinodkotagiri', '_blank')
 	}
 
 	useEffect(() => {
@@ -29,7 +29,7 @@ const Blog = () => {
 					{loading && (
 						<Typography>
 							Redirecting to external site:{' '}
-							<em>https://meduim.com/@vinodkotagiri</em>
+							<em>https://medium.com/@vinodkotagiri</em>
 						</Typography>
 					)}
 					{!loading && (

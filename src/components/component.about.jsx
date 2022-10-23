@@ -48,7 +48,7 @@ const About = () => {
 						JavaScript, React, NodeJs, MongoDB and MySQL. Analytical and precise
 						professional looking forward to take charge of front-end and
 						back-end development. Skillful creating servers and databases for
-						functionality, designing and developing API's.
+						functionality, designing and developing RESTful API's.
 					</Typography>
 					<Stack direction='row' gap={4} mx={6} my={6}>
 						<LinkedIn
