@@ -7,14 +7,10 @@ import { DoneAll } from '@mui/icons-material'
 const Blog = () => {
 	const [loading, setLoading] = useState(true)
 
-	const openBlog = () => {
-		window.open('https://medium.com/@vinodkotagiri', '_blank')
-	}
-
 	useEffect(() => {
 		setTimeout(() => {
-			openBlog()
 			setLoading(false)
+			return window.open('https://medium.com/@vinodkotagiri', '_blank')
 		}, 2500)
 	}, [])
 
@@ -28,7 +24,7 @@ const Blog = () => {
 					{loading && <CircularProgress sx={{ color: '#FDC435' }} />}
 					{loading && (
 						<Typography>
-							Redirecting to external site:{' '}
+							Redirecting to external site:{''}
 							<em>https://medium.com/@vinodkotagiri</em>
 						</Typography>
 					)}
