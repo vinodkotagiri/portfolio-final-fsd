@@ -5,8 +5,9 @@ import {
 	CardContent,
 	CardMedia,
 	Typography,
+	Stack,
 } from '@mui/material'
-import { PublicRounded } from '@mui/icons-material'
+import { PublicRounded, CodeRounded } from '@mui/icons-material'
 import React from 'react'
 
 // const style = {
@@ -55,15 +56,36 @@ const PortfolioCard = ({ project }) => {
 						sx={{ fontWeight: 'bold' }}>
 						{project.subtitle}
 					</Typography>
-					<Box>
+					<Stack
+						direction='row'
+						sx={{ justifyContent: 'space-between', padding: '0.5rem 2.5rem' }}>
+						<Button
+							startIcon={<CodeRounded />}
+							variant='outlined'
+							sx={{
+								margin: '1rem 0',
+								backgroundColor: '#8da9fd',
+								color: '#fff',
+							}}
+							onClick={() => {
+								if (project.feSource) window.open(project.feSource)
+								if (project.beSource) window.open(project.beSource)
+								return null
+							}}>
+							Code
+						</Button>
 						<Button
 							startIcon={<PublicRounded />}
-							variant='outlined'
-							sx={{ margin: '1rem 0', float: 'right' }}
+							variant='contained'
+							sx={{
+								margin: '1rem 0',
+								float: 'right',
+								backgroundColor: '#5f3dc4',
+							}}
 							onClick={() => window.open(project.deployedUrl)}>
 							Visit
 						</Button>
-					</Box>
+					</Stack>
 				</CardContent>
 			</Card>
 			{/* <Box

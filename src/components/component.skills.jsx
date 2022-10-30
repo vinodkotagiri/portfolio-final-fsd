@@ -92,12 +92,6 @@ const Skills = () => {
 		},
 		{
 			id: '15',
-			name: 'GCP',
-			logo: 'https://res.cloudinary.com/vinodkotagiri/image/upload/v1665329393/My%20Websites%20assets/logos/gcp_cx0yac.svg',
-			color: '#4086f5',
-		},
-		{
-			id: '16',
 			name: 'Linux',
 			logo: 'https://res.cloudinary.com/vinodkotagiri/image/upload/v1665330282/My%20Websites%20assets/logos/linux_jmb4gj.svg',
 			color: '#ffcc21',

@@ -83,7 +83,7 @@ const Contact = () => {
 					required
 					id='outlined-required'
 					label='Name'
-					sx={{ width: '66%', backgroundColor: '#fff' }}
+					sx={{ width: '66%', backgroundColor: '#fff', borderRadius: 2 }}
 					value={name}
 					onChange={(e) => setName(e.target.value)}
 				/>
@@ -92,7 +92,7 @@ const Contact = () => {
 					id='outlined-required'
 					label='Email Address'
 					type='email'
-					sx={{ width: '66%', backgroundColor: '#fff' }}
+					sx={{ width: '66%', backgroundColor: '#fff', borderRadius: 2 }}
 					value={email}
 					onChange={(e) => setEmail(e.target.value)}
 				/>
@@ -100,7 +100,7 @@ const Contact = () => {
 					required
 					id='outlined-required'
 					label='Phone Number'
-					sx={{ width: '66%', backgroundColor: '#fff' }}
+					sx={{ width: '66%', backgroundColor: '#fff', borderRadius: 2 }}
 					value={phone}
 					onChange={(e) => setPhone(e.target.value)}
 				/>
@@ -110,7 +110,12 @@ const Contact = () => {
 					id='outlined-required'
 					rows='8'
 					cols='30'
-					style={{ resize: 'none', fontSize: '16px', width: '66%' }}
+					style={{
+						resize: 'none',
+						fontSize: '16px',
+						width: '66%',
+						borderRadius: 2,
+					}}
 					value={message}
 					onChange={(e) => setMessage(e.target.value)}
 				/>

@@ -13,7 +13,7 @@ import Button from '@mui/material/Button'
 import MenuItem from '@mui/material/MenuItem'
 import { Outlet, useLocation, useNavigate } from 'react-router-dom'
 
-const pages = ['Home', 'About', 'Skills', 'Portfolio', 'Contact', 'Blog']
+const pages = ['Home', 'About', 'Skills', 'Portfolio', 'Contact']
 
 const ResponsiveAppBar = () => {
 	const [anchorElNav, setAnchorElNav] = React.useState(null)
@@ -93,6 +93,15 @@ const ResponsiveAppBar = () => {
 										<Typography textAlign='center'>{page}</Typography>
 									</MenuItem>
 								))}
+								<MenuItem
+									onClick={() => {
+										handleCloseNavMenu()
+										window.open('https://medium.com/@vinodkotagiri')
+										navigate('/')
+									}}
+									sx={{ backgroundColor: '#5f3dc4' }}>
+									<Typography textAlign='center'>Blog</Typography>
+								</MenuItem>
 							</Menu>
 						</Box>
 
@@ -140,6 +149,18 @@ const ResponsiveAppBar = () => {
 									{console.log(location.pathname, '/' + page)}
 								</Button>
 							))}
+							<Button
+								onClick={() => {
+									window.open('https://www.medium.com/@vinodkotagiri')
+									navigate('/')
+								}}
+								sx={{
+									my: 2,
+									color: 'black',
+									display: 'block',
+								}}>
+								Blog
+							</Button>
 						</Box>
 					</Toolbar>
 				</Container>

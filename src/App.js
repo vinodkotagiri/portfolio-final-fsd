@@ -5,7 +5,7 @@ import About from './components/component.about'
 import Skills from './components/component.skills'
 import Portfolio from './components/component.portfolio'
 import Contact from './components/component.contact'
-import Blog from './components/component.blog'
+
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 
 import { AnimatePresence } from 'framer-motion'
@@ -21,7 +21,6 @@ const App = () => {
 					<Route path='skills' element={<Skills />} />
 					<Route path='portfolio' element={<Portfolio />} />
 					<Route path='contact' element={<Contact />} />
-					<Route path='blog' element={<Blog />} />
 				</Route>
 			</Routes>
 		</AnimatePresence>
