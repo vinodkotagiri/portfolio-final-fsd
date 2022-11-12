@@ -1,6 +1,6 @@
 import { Typography } from '@mui/material'
 import { Box, Stack } from '@mui/system'
-import shape from './yellowshape.svg'
+import shape from './blob.svg'
 import React from 'react'
 import { motion } from 'framer-motion'
 
@@ -117,10 +117,7 @@ const Skills = () => {
 	]
 
 	return (
-		<motion.div
-			initial={{ opacity: 0 }}
-			animate={{ opacity: 1 }}
-			exit={{ opacity: 0 }}>
+		<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
 			<img
 				src={shape}
 				alt='shape'
@@ -178,11 +175,7 @@ const Skills = () => {
 						<Typography variant='h5' color={skill.color}>
 							{skill.name}
 						</Typography>
-						<img
-							src={skill.logo}
-							alt={skill.name}
-							style={{ width: '8rem', height: '4rem' }}
-						/>
+						<img src={skill.logo} alt={skill.name} style={{ width: '8rem', height: '4rem' }} />
 					</Stack>
 				))}
 			</Box>

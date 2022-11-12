@@ -2,16 +2,13 @@ import React from 'react'
 import { Stack, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import { LinkedIn, GitHub, Twitter } from '@mui/icons-material'
-import shape from './yellowshape.svg'
+import shape from './blob.svg'
 import { motion } from 'framer-motion'
-import vinimg from './vinu_full_webp.png'
+import vinimg from './hero.png'
 
 const About = () => {
 	return (
-		<motion.div
-			initial={{ opacity: 0 }}
-			animate={{ opacity: 1 }}
-			exit={{ opacity: 0 }}>
+		<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
 			<img
 				src={shape}
 				alt='shape'
@@ -33,9 +30,7 @@ const About = () => {
 				About me
 			</Typography>
 			<Stack direction='row' sx={{ alignItems: 'center' }} gap={4}>
-				<Stack
-					sx={{ width: '75vw', padding: '6%', textAlign: 'justify' }}
-					gap={2}>
+				<Stack sx={{ width: '75vw', padding: '6%', textAlign: 'justify' }} gap={2}>
 					<Typography
 						sx={{
 							fontSize: '24px',
@@ -43,27 +38,19 @@ const About = () => {
 							color: '#828282',
 							fontFamily: 'Nunito',
 						}}>
-						Tech-Savy Full Stack Web Developer proficient in fundamental
-						front-end languages and server-side languages. In-depth knowledge of
-						JavaScript, React, NodeJs, MongoDB and MySQL. Analytical and precise
-						professional looking forward to take charge of front-end and
-						back-end development. Skillful creating servers and databases for
-						functionality, designing and developing RESTful API's.
+						Tech-Savy Full Stack Web Developer proficient in fundamental front-end languages and server-side languages.
+						In-depth knowledge of JavaScript, React, NodeJs, MongoDB and MySQL. Analytical and precise professional
+						looking forward to take charge of front-end and back-end development. Skillful creating servers and
+						databases for functionality, designing and developing RESTful API's.
 					</Typography>
 					<Stack direction='row' gap={4} mx={6} my={6}>
 						<LinkedIn
 							sx={{ fontSize: '3.5rem', cursor: 'pointer', color: '#5f3dc4' }}
-							onClick={() =>
-								window.open(
-									'https://www.linkedin.com/in/kotagiri-vinod-a10ba856/'
-								)
-							}
+							onClick={() => window.open('https://www.linkedin.com/in/kotagiri-vinod-a10ba856/')}
 						/>
 						<GitHub
 							sx={{ fontSize: '3.5rem', cursor: 'pointer', color: '#5f3dc4' }}
-							onClick={() =>
-								window.open('https://www.github.com/vinodkotagiri')
-							}
+							onClick={() => window.open('https://www.github.com/vinodkotagiri')}
 						/>
 						<Twitter
 							sx={{ fontSize: '3.5rem', cursor: 'pointer', color: '#5f3dc4' }}

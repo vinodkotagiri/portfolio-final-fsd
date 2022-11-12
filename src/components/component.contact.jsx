@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Send } from '@mui/icons-material'
 import emailjs from '@emailjs/browser'
 import toast, { Toaster } from 'react-hot-toast'
-import shape from './yellowshape.svg'
+import shape from './blob.svg'
 import { motion } from 'framer-motion'
 const Contact = () => {
 	const [name, setName] = useState('')
@@ -13,8 +13,7 @@ const Contact = () => {
 	const [disabled, setDisabled] = useState(true)
 
 	useEffect(() => {
-		if (email && email.match(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/))
-			setDisabled(false)
+		if (email && email.match(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/)) setDisabled(false)
 		else setDisabled(true)
 		if (name && email && phone && message) setDisabled(false)
 		else setDisabled(true)
@@ -51,15 +50,8 @@ const Contact = () => {
 	}
 
 	return (
-		<motion.div
-			initial={{ opacity: 0 }}
-			animate={{ opacity: 1 }}
-			exit={{ opacity: 0 }}>
-			<img
-				src={shape}
-				alt='shape'
-				style={{ position: 'absolute', top: 0, right: 0, zIndex: -100 }}
-			/>
+		<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+			<img src={shape} alt='shape' style={{ position: 'absolute', top: 0, right: 0, zIndex: -100 }} />
 
 			<Typography
 				variant='h3'

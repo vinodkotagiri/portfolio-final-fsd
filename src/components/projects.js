@@ -4,10 +4,10 @@ export const projects = [
 		name: 'URL Shortener',
 		subtitle: 'A URL Shortener application',
 		cover:
-			'https://res.cloudinary.com/vinodkotagiri/image/upload/v1665334654/My%20Websites%20assets/portfolio-projects/membook_sztp5t.jpg',
-		deployedUrl: '',
-		feSource: '',
-		beSource: '',
+			'https://res.cloudinary.com/vinodkotagiri/image/upload/v1668268028/My%20Websites%20assets/portfolio-projects/url-link_llkhib.jpg',
+		deployedUrl: 'https://url-shortener-zen.netlify.app',
+		feSource: 'https://github.com/vinodkotagiri/urlShortener-client',
+		beSource: 'https://github.com/vinodkotagiri/urlShortener-server',
 	},
 	{
 		id: '2',

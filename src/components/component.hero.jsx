@@ -1,5 +1,5 @@
 import React from 'react'
-import shape from './yellowshape.svg'
+import shape from './blob.svg'
 import { Button, Stack, Typography } from '@mui/material'
 import { VisibilityOutlined, DownloadOutlined } from '@mui/icons-material'
 // import vinimg from './vinu_full_webp.png'
