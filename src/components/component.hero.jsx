@@ -8,10 +8,7 @@ import { motion } from 'framer-motion'
 import cover from './cover_hero.webp'
 const Hero = () => {
 	return (
-		<motion.div
-			initial={{ opacity: 0 }}
-			animate={{ opacity: 1 }}
-			exit={{ opacity: 0 }}>
+		<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
 			<img
 				src={shape}
 				alt='shape'
@@ -86,12 +83,7 @@ const Hero = () => {
 						startIcon={<DownloadOutlined />}
 						variant='outlined'
 						sx={{ color: '#fff', padding: '0 1rem' }}
-						onClick={() =>
-							window.open(
-								'https://1drv.ms/w/s!AqUO-r5Zn68aiexz71Vc0Zuu0TWI9g?e=8HxjCm',
-								'_blank'
-							)
-						}>
+						onClick={() => window.open('https://1drv.ms/b/s!AqUO-r5Zn68aie4HrKnQG0TjnSEOGg?e=rGLbOX', '_blank')}>
 						Resume
 					</Button>
 				</Stack>

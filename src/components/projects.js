@@ -1,6 +1,16 @@
 export const projects = [
 	{
 		id: '1',
+		name: 'URL Shortener',
+		subtitle: 'A URL Shortener application',
+		cover:
+			'https://res.cloudinary.com/vinodkotagiri/image/upload/v1665334654/My%20Websites%20assets/portfolio-projects/membook_sztp5t.jpg',
+		deployedUrl: '',
+		feSource: '',
+		beSource: '',
+	},
+	{
+		id: '2',
 		name: 'WRITZER',
 		subtitle: 'content management system',
 		cover:
@@ -10,7 +20,7 @@ export const projects = [
 		beSource: 'https://github.com/vinodkotagiri/WRITZER-server',
 	},
 	{
-		id: '2',
+		id: '3',
 		name: 'BizBook.io',
 		subtitle: 'An E-Commerce application',
 		cover:
@@ -20,24 +30,14 @@ export const projects = [
 		beSource: 'https://github.com/vinodkotagiri/bizbook-server',
 	},
 	{
-		id: '3',
-		name: 'yepsocial',
+		id: '4',
+		name: 'Facebook Clone',
 		subtitle: 'A social media application',
 		cover:
 			'https://res.cloudinary.com/vinodkotagiri/image/upload/v1665334654/My%20Websites%20assets/portfolio-projects/membook_sztp5t.jpg',
-		deployedUrl: '',
-		feSource: '',
-		beSource: '',
-	},
-	{
-		id: '4',
-		name: 'chatterbeak',
-		subtitle: 'A Messaging Service',
-		cover:
-			'https://res.cloudinary.com/vinodkotagiri/image/upload/v1665335112/My%20Websites%20assets/portfolio-projects/nuchat_uirfod.jpg',
-		deployedUrl: '',
-		feSource: '',
-		beSource: '',
+		deployedUrl: 'https://vin-fb-clone.netlify.app/',
+		feSource: 'https://github.com/vinodkotagiri/fb-clone-client',
+		beSource: 'https://github.com/vinodkotagiri/fb-clone-server',
 	},
 	{
 		id: '5',
