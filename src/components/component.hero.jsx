@@ -83,7 +83,7 @@ const Hero = () => {
 						startIcon={<DownloadOutlined />}
 						variant='outlined'
 						sx={{ color: '#fff', padding: '0 1rem' }}
-						onClick={() => window.open('https://1drv.ms/b/s!AqUO-r5Zn68aie4HrKnQG0TjnSEOGg?e=rGLbOX', '_blank')}>
+						onClick={() => window.open('https://1drv.ms/b/s!AqUO-r5Zn68aie4HrKnQG0TjnSEOGg?e=cZEl1S', '_blank')}>
 						Resume
 					</Button>
 				</Stack>
