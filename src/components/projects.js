@@ -31,13 +31,13 @@ export const projects = [
 	},
 	{
 		id: '4',
-		name: 'Facebook Clone',
-		subtitle: 'A social media application',
+		name: 'AWS Polymer Clone',
+		subtitle: 'AWS Polymer Clone App',
 		cover:
 			'https://res.cloudinary.com/vinodkotagiri/image/upload/v1665334654/My%20Websites%20assets/portfolio-projects/membook_sztp5t.jpg',
-		deployedUrl: 'https://vin-fb-clone.netlify.app/',
-		feSource: 'https://github.com/vinodkotagiri/fb-clone-client',
-		beSource: 'https://github.com/vinodkotagiri/fb-clone-server',
+		deployedUrl: '	https://aws-polymer-clone.netlify.app',
+		feSource: 'https://github.com/vinodkotagiri/aws-polymer-search-clone-frontend',
+		beSource: 'https://github.com/vinodkotagiri/aws-polymer-search-clone-backend',
 	},
 	{
 		id: '5',
