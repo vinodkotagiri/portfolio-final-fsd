@@ -118,7 +118,7 @@ const Skills = () => {
 
 	return (
 		<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-			<img
+			{/* <img
 				src={shape}
 				alt='shape'
 				style={{
@@ -128,13 +128,14 @@ const Skills = () => {
 					right: 0,
 					zIndex: -100,
 				}}
-			/>
+			/> */}
 			<Typography
 				variant='h3'
 				sx={{
 					textAlign: 'center',
-					borderBottom: '4px double #5f3dc4',
+					borderBottom: '4px double #828282',
 					fontFamily: 'Nunito',
+					color: '#828282',
 				}}>
 				Skills
 			</Typography>
@@ -155,7 +156,7 @@ const Skills = () => {
 						sx={{
 							padding: '1.25rem',
 							margin: '0.25rem',
-							width: { xs: '75vw', md: '18rem' },
+							width: { xs: '75vw', md: '15rem' },
 							justifyContent: 'start',
 							alignItems: 'center',
 							border: `1px solid ${skill.color}`,

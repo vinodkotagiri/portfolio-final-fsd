@@ -24,8 +24,9 @@ const About = () => {
 				variant='h3'
 				sx={{
 					textAlign: 'center',
-					borderBottom: '4px double #5f3dc4',
+					borderBottom: '4px double #828282',
 					fontFamily: 'Nunito',
+					color: '#828282',
 				}}>
 				About me
 			</Typography>
@@ -45,15 +46,15 @@ const About = () => {
 					</Typography>
 					<Stack direction='row' gap={4} mx={6} my={6}>
 						<LinkedIn
-							sx={{ fontSize: '3.5rem', cursor: 'pointer', color: '#5f3dc4' }}
+							sx={{ fontSize: '3.5rem', cursor: 'pointer', color: 'var(--secondary-color)' }}
 							onClick={() => window.open('https://www.linkedin.com/in/kotagiri-vinod-a10ba856/')}
 						/>
 						<GitHub
-							sx={{ fontSize: '3.5rem', cursor: 'pointer', color: '#5f3dc4' }}
+							sx={{ fontSize: '3.5rem', cursor: 'pointer', color: 'var(--secondary-color)' }}
 							onClick={() => window.open('https://www.github.com/vinodkotagiri')}
 						/>
 						<Twitter
-							sx={{ fontSize: '3.5rem', cursor: 'pointer', color: '#5f3dc4' }}
+							sx={{ fontSize: '3.5rem', cursor: 'pointer', color: 'var(--secondary-color)' }}
 							onClick={() => window.open('https://twitter.com/vinodkotagiri')}
 						/>
 					</Stack>
@@ -63,7 +64,7 @@ const About = () => {
 					sx={{
 						width: '400px',
 						height: '400px',
-						backgroundColor: '#5F3DC4',
+						backgroundColor: 'var(--secondary-color)',
 						borderRadius: '50% 25%',
 						display: { xs: 'none', md: 'flex' },
 					}}>

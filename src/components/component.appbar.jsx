@@ -30,7 +30,7 @@ const ResponsiveAppBar = () => {
 	const navigate = useNavigate()
 	return (
 		<>
-			<AppBar position='sticky' sx={{ background: '#5f3dc4' }}>
+			<AppBar position='sticky' sx={{ background: 'inherit', width: '100vw' }}>
 				<Container>
 					<Toolbar>
 						<Box px={2}>
@@ -43,7 +43,7 @@ const ResponsiveAppBar = () => {
 									display: { xs: 'none', md: 'flex' },
 									fontFamily: 'Great Vibes',
 									fontSize: '2rem',
-									color: '#000',
+									color: 'var(--third-color)',
 									fontWeight: 'bold',
 									textDecoration: 'none',
 								}}
@@ -89,7 +89,7 @@ const ResponsiveAppBar = () => {
 											handleCloseNavMenu()
 											navigate(`${page.toLocaleLowerCase()}`)
 										}}
-										sx={{ backgroundColor: '#5f3dc4' }}>
+										sx={{ backgroundColor: 'inherit' }}>
 										<Typography textAlign='center'>{page}</Typography>
 									</MenuItem>
 								))}
@@ -99,7 +99,7 @@ const ResponsiveAppBar = () => {
 										window.open('https://medium.com/@vinodkotagiri')
 										navigate('/')
 									}}
-									sx={{ backgroundColor: '#5f3dc4' }}>
+									sx={{ backgroundColor: 'inherit' }}>
 									<Typography textAlign='center'>Blog</Typography>
 								</MenuItem>
 							</Menu>
@@ -115,7 +115,7 @@ const ResponsiveAppBar = () => {
 								flexGrow: 1,
 								fontFamily: 'Great Vibes',
 								fontSize: '2rem',
-								color: '#828282',
+								color: 'var(--secondary-color)',
 								fontWeight: 'bold',
 								textDecoration: 'none',
 							}}
@@ -137,12 +137,16 @@ const ResponsiveAppBar = () => {
 									}}
 									sx={{
 										my: 2,
-										color: 'black',
+										color: 'var(--third-color)',
 										display: 'block',
 									}}
 									style={
 										location.pathname === `/${page}`
-											? { borderBottom: '2px solid white', color: 'white' }
+											? {
+													borderBottom: '2px solid var(--secondary-color)',
+													color: 'var(--secondary-color)',
+													fontWeight: 'bold',
+											  }
 											: { backgroundColor: '' }
 									}>
 									{page}
@@ -156,7 +160,7 @@ const ResponsiveAppBar = () => {
 								}}
 								sx={{
 									my: 2,
-									color: 'black',
+									color: 'var(--third-color)',
 									display: 'block',
 								}}>
 								Blog

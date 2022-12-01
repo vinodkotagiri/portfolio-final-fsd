@@ -5,8 +5,15 @@ html {
 	box-sizing: border-box;
 }
 body {
+	overflow-x: hidden;
+	overflow-y: scroll;
 	margin: 0;
 	padding: 0;
-	background-color: black;
+	background-color: #293462;
 	color: ghostwhite;
+}
+:root {
+	--primary-color: #1cd6ce;
+	--secondary-color: #fedb39;
+	--third-color: #e94560;
 }

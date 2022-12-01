@@ -22,8 +22,9 @@ const Portfolio = () => {
 				variant='h3'
 				sx={{
 					textAlign: 'center',
-					borderBottom: '4px double #5f3dc4',
+					borderBottom: '4px double #828282',
 					fontFamily: 'Nunito',
+					color: '#828282',
 				}}>
 				Portfolio
 			</Typography>

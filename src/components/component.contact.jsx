@@ -57,8 +57,9 @@ const Contact = () => {
 				variant='h3'
 				sx={{
 					textAlign: 'center',
-					borderBottom: '4px double #5F3DC4',
+					borderBottom: '4px double #828282',
 					fontFamily: 'Nunito',
+					color: '#828282',
 				}}>
 				Contact me
 			</Typography>
@@ -115,7 +116,7 @@ const Contact = () => {
 					endIcon={<Send />}
 					variant='contained'
 					size='large'
-					sx={{ backgroundColor: '#FDC435' }}
+					sx={{ backgroundColor: 'var(--third-color)' }}
 					disabled={disabled}
 					onClick={handleSubmit}>
 					Submit

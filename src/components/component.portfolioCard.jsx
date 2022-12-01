@@ -1,12 +1,4 @@
-import {
-	Button,
-	Card,
-	Box,
-	CardContent,
-	CardMedia,
-	Typography,
-	Stack,
-} from '@mui/material'
+import { Button, Card, Box, CardContent, CardMedia, Typography, Stack } from '@mui/material'
 import { PublicRounded, CodeRounded } from '@mui/icons-material'
 import React from 'react'
 
@@ -37,35 +29,23 @@ const PortfolioCard = ({ project }) => {
 					minWidth: 345,
 					backgroundColor: '#3b4252',
 				}}>
-				<CardMedia
-					component='img'
-					height='140'
-					image={project.cover}
-					alt={project.name}
-				/>
+				<CardMedia component='img' height='140' image={project.cover} alt={project.name} />
 				<CardContent>
-					<Typography
-						variant='h6'
-						color='primary.light'
-						sx={{ fontWeight: 'bold', color: '#fff' }}>
+					<Typography variant='h6' color='primary.light' sx={{ fontWeight: 'bold', color: '#fff' }}>
 						{project.name}
 					</Typography>
-					<Typography
-						variant='p'
-						color='text.secondary'
-						sx={{ fontWeight: 'bold' }}>
+					<Typography variant='p' color='text.secondary' sx={{ fontWeight: 'bold' }}>
 						{project.subtitle}
 					</Typography>
-					<Stack
-						direction='row'
-						sx={{ justifyContent: 'space-between', padding: '0.5rem 2.5rem' }}>
+					<Stack direction='row' sx={{ justifyContent: 'space-between', padding: '0.5rem 2.5rem' }}>
 						<Button
 							startIcon={<CodeRounded />}
 							variant='outlined'
 							sx={{
 								margin: '1rem 0',
-								backgroundColor: '#8da9fd',
+								backgroundColor: 'var(--third-color)',
 								color: '#fff',
+								fontWeight: 'bold',
 							}}
 							onClick={() => {
 								if (project.feSource) window.open(project.feSource)
@@ -80,7 +60,8 @@ const PortfolioCard = ({ project }) => {
 							sx={{
 								margin: '1rem 0',
 								float: 'right',
-								backgroundColor: '#5f3dc4',
+								backgroundColor: 'var(--primary-color)',
+								fontWeight: 'bold',
 							}}
 							onClick={() => window.open(project.deployedUrl)}>
 							Visit

@@ -17,6 +17,7 @@ const Hero = () => {
 					top: 0,
 					right: 0,
 					zIndex: -100,
+					width: '50%',
 				}}
 			/>
 			{/* <img
@@ -44,11 +45,11 @@ const Hero = () => {
 						fontFamily: 'Nunito',
 						fontSize: '20px',
 						fontWeight: 'bold',
-						color: { xs: '#fff', md: '#5f3dc4' },
+						color: { xs: '#fff', md: 'var(--third-color)' },
 					}}>
 					FULLSTACK DEVELOPER
 				</Typography>
-				<Typography variant='h2' sx={{ color: '#fff' }}>
+				<Typography variant='h2' sx={{ color: 'var(--primary-color)' }}>
 					Hello,
 					<br />
 					I'm Vinod Kotagiri
@@ -68,13 +69,13 @@ const Hero = () => {
 					scalabale and maintainable web applications.{' '}
 				</Typography>
 				<Stack direction='row' gap={3} my={4}>
-					<Link to='/Portfolio'>
+					<Link to='/Portfolio' style={{ textDecoration: 'none' }}>
 						<Button
 							startIcon={<VisibilityOutlined />}
 							variant='contained'
 							sx={{
-								backgroundColor: { md: '#5F3DC4', xs: '#fff' },
-								color: '#25282B',
+								backgroundColor: { md: 'var(--third-color)', xs: '#fff' },
+								color: '#fff',
 							}}>
 							Portfolio
 						</Button>
@@ -99,9 +100,7 @@ const Hero = () => {
 					left: 0,
 					zIndex: -100,
 					opacity: '15%',
-				}}>
-				Hello
-			</div>
+				}}></div>
 		</motion.div>
 	)
 }
